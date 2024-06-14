@@ -109,7 +109,16 @@ a {
 html {
   max-width: 100vw;
   overflow-x: hidden;
-  background: linear-gradient(to bottom, #266db6, #90c4d6);
+  /* background: linear-gradient(to left, #3e73a1, #90c4d6); */
+  /* background: radial-gradient(#3e73a1, #c8e6ef); */
+
+  background: rgb(11, 56, 95);
+  background: radial-gradient(
+    circle,
+    rgba(11, 56, 95, 1) 7%,
+    rgba(62, 115, 161, 1) 58%,
+    rgba(200, 230, 239, 1) 100%
+  );
   display: flex;
   justify-content: center;
 }
@@ -119,9 +128,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 70%;
   min-height: 100vh;
   margin: 0;
-  background-color: #8d2525;
+  background-color: #f1f9fc;
   z-index: -2;
+}
+
+@media (max-width: 1000px) {
+  body {
+    width: 95%;
+  }
 }
