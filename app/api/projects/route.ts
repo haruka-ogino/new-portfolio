@@ -1,16 +1,13 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { getProjects } from '@/lib/store'
+import { connectToDB } from '@/utils/database'
 import { Project } from '@/models/projects'
 
-export async function GET(
-  req: NextApiRequest,
-  res: NextApiResponse<Project[] | { error: string }>
-) {
+export const GET = async (req: Request) => {
   try {
-    const data = await getProjects()
-    res.status(200).json(data)
+    await connectToDB()
+    const projects = await Project.find({})
+
+    return new Response(JSON.stringify(projects), { status: 200 })
   } catch (error) {
-    console.error('Failed to fetch projects:', error)
-    res.status(500).json({ error: 'Failed to fetch projects' })
+    return new Response('Failed to fetch projects', { status: 500 })
   }
 }

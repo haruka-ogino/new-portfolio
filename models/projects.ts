@@ -1,4 +1,4 @@
-export interface Project {
+export interface IProject {
   id: number
   title: string
   img: string
@@ -7,3 +7,19 @@ export interface Project {
   githubRepo: string
   deployedLink: string
 }
+
+const mongoose = require('mongoose')
+
+const projectSchema = new mongoose.Schema({
+  id: Number,
+  title: String,
+  img: String,
+  alt: String,
+  description: String,
+  githubRepo: String,
+  deployedLink: String,
+})
+
+export const Project = mongoose.model('Project', projectSchema)
+
+// module.exports = Project
