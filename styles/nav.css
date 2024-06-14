@@ -1,0 +1,59 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1%;
+  background-color: #f4fbfe;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8em;
+  border-radius: 10px;
+  width: 70%;
+  z-index: 1; /* Set a positive z-index */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(to right, rgb(27, 226, 218), rgb(103, 126, 235));
+  border-radius: 15px; /* Adjust as needed */
+  z-index: -1;
+}
+
+.nav button {
+  margin: 0.5em;
+  border: 1px solid #266db6;
+  font-weight: 500;
+  padding: 0.2em 0.5em;
+  position: relative;
+  /* background-color: #f4fbfe; */
+}
+
+.nav button:before {
+  content: '';
+  height: calc(90% + 3px);
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  background-color: #d5edf6;
+  transition: 300ms ease-in;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.nav button:hover:before {
+  background-color: #6dcff6;
+}
+
+/* .nav {
+  position: relative;
+  display: flex;
+  background-color: black;
+  border-radius: 10px;
+} */

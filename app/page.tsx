@@ -20,7 +20,7 @@ export default function Home() {
           <h1>Haruka Ogino</h1>
           <p>Full-stack Developer</p>
         </div>
-        <aside className={styles.sections}>
+        <aside className="sections">
           <button>About Me</button>
           <button>Projects</button>
           <button>Blog Entries</button>
