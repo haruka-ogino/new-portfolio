@@ -4,6 +4,7 @@
 import { IProject, Project } from '@/models/projects' // Adjust the path as needed
 import '../styles/about.css'
 import { useEffect, useState } from 'react'
+import ProjectCard from './ProjectCard'
 
 export default function Projects() {
   const [projects, setProjects] = useState<IProject[]>([])
@@ -42,14 +43,8 @@ export default function Projects() {
         <h1>My Projects</h1>
         <ul>
           {projects.map((project) => (
-            <li key={project.id}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <a href={project.githubRepo}>GitHub Repo</a>
-              <br />
-              <a href={project.deployedLink}>Deployed Link</a>
-              <br />
-              <img src={project.img} alt={project.alt} />
+            <li key={project._id}>
+              <ProjectCard project={project} />
             </li>
           ))}
         </ul>

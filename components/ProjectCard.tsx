@@ -1,11 +1,20 @@
+import { IProject } from '@/models/projects'
 import '../styles/about.css'
 
-export default function Projects() {
+interface Props {
+  project: IProject
+}
+
+export default function ProjectCard({ project }: Props) {
   return (
-    <section className="projects">
-      <div>
-        <h1>My Projects</h1> =
-      </div>
-    </section>
+    <>
+      <h2>{project.title}</h2>
+      <p>{project.description}</p>
+      <a href={project.githubRepo}>GitHub Repo</a>
+      <br />
+      <a href={project.deployedLink}>Deployed Link</a>
+      <br />
+      <img src={project.img} alt={project.alt} />
+    </>
   )
 }
