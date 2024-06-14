@@ -1,8 +1,7 @@
 'use client'
-// pages/Projects.tsx
 
-import { IProject, Project } from '@/models/projects' // Adjust the path as needed
-import '../styles/about.css'
+import { IProject } from '@/models/projects'
+import '../styles/home.css'
 import { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 

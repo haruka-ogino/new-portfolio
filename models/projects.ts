@@ -1,5 +1,6 @@
-export interface IProject {
-  _id: string
+import mongoose, { Schema, Document } from 'mongoose'
+
+export interface IProject extends Document {
   title: string
   img: string
   alt: string
@@ -8,16 +9,13 @@ export interface IProject {
   deployedLink: string
 }
 
-const mongoose = require('mongoose')
-
-const projectSchema = new mongoose.Schema({
-  id: Number,
-  title: String,
-  img: String,
-  alt: String,
-  description: String,
-  githubRepo: String,
-  deployedLink: String,
+const projectSchema = new Schema<IProject>({
+  title: { type: String, required: true },
+  img: { type: String, required: true },
+  alt: { type: String, required: true },
+  description: { type: String, required: true },
+  githubRepo: { type: String, required: true },
+  deployedLink: { type: String, required: true },
 })
 
-export const Project = mongoose.model('Project', projectSchema)
+export const Project = mongoose.model<IProject>('Project', projectSchema)

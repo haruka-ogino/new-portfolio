@@ -26,6 +26,12 @@ body {
   }
 }
 
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
 section {
   margin: 2em;
 }

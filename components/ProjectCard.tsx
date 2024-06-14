@@ -1,5 +1,5 @@
 import { IProject } from '@/models/projects'
-import '../styles/about.css'
+import '../styles/home.css'
 
 interface Props {
   project: IProject
