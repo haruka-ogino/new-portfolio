@@ -1,6 +1,7 @@
 // import Image from 'next/image'
 import About from '@/components/About'
 import styles from './page.module.css'
+import Projects from '@/components/Projects'
 
 export default function Home() {
   // const handleClick = (id: string) => {
@@ -27,6 +28,7 @@ export default function Home() {
           {/* <button>Blog Entries</button> */}
         </aside>
         <About />
+        <Projects />
       </div>
     </main>
   )
