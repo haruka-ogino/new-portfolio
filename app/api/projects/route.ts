@@ -1,14 +1,19 @@
-import path from 'path'
-import { promises as fs } from 'fs'
+import { NextApiRequest, NextApiResponse } from 'next'
+import { getProjects } from '@/lib/store'
+import { Project } from '@/models/projects'
 
-export default async function handler(req: Request, res: Response) {
-  // Find the absolute path of the json directory
-  const jsonDirectory = path.join(process.cwd(), 'public')
-  // Read the json data file data.json
-  const fileContents = await fs.readFile(
-    jsonDirectory + '/projects/projects.json',
-    'utf8'
-  )
-  // Return the content of the data file in json format
-  res.status(200).json(JSON.parse(fileContents))
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Project[] | { error: string }>
+) {
+  if (req.method === 'GET') {
+    try {
+      const data = await getProjects()
+      res.status(200).json(data)
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch projects' })
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' })
+  }
 }
