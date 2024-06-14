@@ -1,12 +1,12 @@
 'use client'
 // pages/Projects.tsx
 
-import { Project } from '@/models/projects' // Adjust the path as needed
+import { IProject, Project } from '@/models/projects' // Adjust the path as needed
 import '../styles/about.css'
 import { useEffect, useState } from 'react'
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([])
+  const [projects, setProjects] = useState<IProject[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Projects() {
             `Failed to fetch projects - ${response.status} ${response.statusText}`
           )
         }
-        const data: Project[] = await response.json()
+        const data: IProject[] = await response.json()
         setProjects(data)
         setLoading(false)
       } catch (error) {
