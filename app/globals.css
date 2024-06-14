@@ -24,10 +24,10 @@ body {
   body {
     width: 95%;
   }
-  .nav {
-    width: 100%;
-    position: fixed;
-  }
+}
+
+section {
+  margin: 2em;
 }
 
 .sections {

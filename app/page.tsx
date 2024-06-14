@@ -1,4 +1,5 @@
 // import Image from 'next/image'
+import About from '@/components/About'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -14,18 +15,19 @@ export default function Home() {
   // }
   return (
     <main>
-      <section className={styles.main} id="intro">
-        <div className={styles.intro}>
+      <div className={styles.main} id="intro">
+        <section className={styles.intro}>
           <p>Hi there, I&apos;m</p>
           <h1>Haruka Ogino</h1>
           <p>Full-stack Developer</p>
-        </div>
+        </section>
         <aside className="sections">
           <button>About Me</button>
           <button>Projects</button>
-          <button>Blog Entries</button>
+          {/* <button>Blog Entries</button> */}
         </aside>
-      </section>
+        <About />
+      </div>
     </main>
   )
 }
