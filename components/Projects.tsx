@@ -43,7 +43,7 @@ export default function Projects() {
       </>
       <ul>
         {projects.map((project, i) => (
-          <li key={i + 1}>
+          <li key={i + 1} className="project">
             <ProjectCard project={project} />
           </li>
         ))}
