@@ -96,3 +96,7 @@ a {
 .buttons:hover:before {
   background-color: #6dcff6;
 }
+
+footer {
+  display: flex;
+}
