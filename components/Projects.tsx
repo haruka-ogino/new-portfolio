@@ -1,7 +1,7 @@
 'use client'
+import '../styles/home.css'
 
 import { IProject } from '@/models/projects'
-import '../styles/home.css'
 import { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 
@@ -37,17 +37,17 @@ export default function Projects() {
   console.log(projects)
 
   return (
-    <section className="projects sections">
-      <div>
+    <>
+      <>
         <h1>My Projects</h1>
-        <ul>
-          {projects.map((project) => (
-            <li key={project._id}>
-              <ProjectCard project={project} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+      </>
+      <ul>
+        {projects.map((project, i) => (
+          <li key={i + 1}>
+            <ProjectCard project={project} />
+          </li>
+        ))}
+      </ul>
+    </>
   )
 }

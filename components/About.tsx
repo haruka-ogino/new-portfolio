@@ -2,7 +2,7 @@ import '../styles/home.css'
 
 export default function About() {
   return (
-    <section className="about-me sections">
+    <>
       <div>
         <h1>About Me</h1>{' '}
         <p>
@@ -17,6 +17,6 @@ export default function About() {
         </p>
       </div>
       <img src="/headshot.png" />
-    </section>
+    </>
   )
 }

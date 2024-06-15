@@ -4,6 +4,7 @@ import About from '@/components/About'
 import styles from './page.module.css'
 import Projects from '@/components/Projects'
 import { useRef } from 'react'
+import '../styles/home.css'
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null)
@@ -47,12 +48,12 @@ export default function Home() {
             Projects
           </button>
         </aside>
-        <div ref={aboutRef}>
+        <section className="sections about-me" ref={aboutRef}>
           <About />
-        </div>
-        <div ref={projectsRef}>
+        </section>{' '}
+        <section className="sections projects" ref={projectsRef}>
           <Projects />
-        </div>
+        </section>{' '}
       </div>
     </main>
   )
