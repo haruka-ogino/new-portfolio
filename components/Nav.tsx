@@ -2,12 +2,12 @@ import '../styles/nav.css'
 
 export default function Nav() {
   return (
-    <nav id="nav" className="nav sections">
-      <button>Home</button>
-      <button>Back to the top</button>
-      <button>My GitHub</button>
-      <button>My LinkedIn</button>
-      <button>My CV</button>
+    <nav id="nav" className="nav">
+      <button className="buttons">Home</button>
+      <button className="buttons">Back to the top</button>
+      <button className="buttons">My GitHub</button>
+      <button className="buttons">My LinkedIn</button>
+      <button className="buttons">My CV</button>
     </nav>
   )
 }

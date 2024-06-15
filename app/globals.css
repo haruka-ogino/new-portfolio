@@ -18,7 +18,7 @@ body {
   margin: 0;
   background-color: #f1f9fc;
   z-index: -2;
-  margin-top: 3em;
+  padding-top: 10em;
 }
 
 @media (max-width: 1000px) {
@@ -38,11 +38,15 @@ section {
 }
 
 .sections {
+  height: 100vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
 }
 
-.sections button {
+.buttons {
   background-color: transparent;
   margin: 1em;
   border: 1px solid #266db6;
@@ -59,17 +63,17 @@ section {
   touch-action: manipulation;
 }
 
-.sections button:hover,
-.sections button:active {
+.buttons:hover,
+.buttons:active {
   outline: 0;
 }
 
-.sections button:hover {
+.buttons:hover {
   background-color: transparent;
   cursor: pointer;
 }
 
-.sections button:before {
+.buttons:before {
   background-color: #d5edf6;
   content: '';
   height: calc(100% + 3px);
@@ -81,6 +85,6 @@ section {
   z-index: -1;
 }
 
-.sections button:hover:before {
+.buttons:hover:before {
   background-color: #6dcff6;
 }

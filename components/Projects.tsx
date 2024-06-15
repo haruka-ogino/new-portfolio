@@ -37,7 +37,7 @@ export default function Projects() {
   console.log(projects)
 
   return (
-    <section className="projects">
+    <section className="projects sections">
       <div>
         <h1>My Projects</h1>
         <ul>
