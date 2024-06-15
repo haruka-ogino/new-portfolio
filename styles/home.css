@@ -26,6 +26,21 @@
   width: 35em;
 }
 
+.projects h3 {
+  margin: 0em;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  margin: 1em 0em;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
 li.project {
   display: flex;
   border: 1px solid blue;
@@ -40,4 +55,11 @@ li.project {
 .project-links {
   display: flex;
   flex-direction: row;
+}
+
+.reverse-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
 }
