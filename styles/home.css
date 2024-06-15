@@ -27,10 +27,6 @@
   min-width: 20em;
 }
 
-.projects h3 {
-  margin: 0em;
-}
-
 .project {
   display: flex;
   flex-direction: row;
@@ -67,6 +63,10 @@ li.project {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+.reverse-desc {
+  text-align: end;
 }
 
 p.tech-stack {
