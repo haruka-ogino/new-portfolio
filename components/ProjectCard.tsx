@@ -21,7 +21,7 @@ export default function ProjectCard({ project, i }: Props) {
         <p className="tech-stack">{techStack}</p>
       </div>
       <div className="project-visuals">
-        {/* <img src="/projects/lucas-mansion.gif" alt="placeholder for all" /> */}
+        <img src="/projects/lucas-mansion.gif" alt="placeholder for all" />
         <br />
         <div className="project-links">
           <a href={project.githubRepo}>GitHub Repo</a>
