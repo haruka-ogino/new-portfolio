@@ -7,7 +7,10 @@ export default function Nav() {
       <button className="buttons">Back to the top</button>
       <button className="buttons">My GitHub</button>
       <button className="buttons">My LinkedIn</button>
-      <button className="buttons">My CV</button>
+      <button className="buttons">
+        My CV
+        <i className="fa fa-github-square" aria-hidden="true" />
+      </button>
     </nav>
   )
 }

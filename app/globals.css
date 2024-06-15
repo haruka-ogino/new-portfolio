@@ -41,6 +41,13 @@ section {
   margin: 2em;
 }
 
+a {
+  font-size: 18px;
+  text-decoration: 'none';
+  color: 'inherit';
+  margin: 0px;
+}
+
 .buttons {
   background-color: transparent;
   margin: 1em;

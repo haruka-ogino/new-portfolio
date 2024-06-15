@@ -17,8 +17,8 @@
 }
 
 .projects {
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: auto;
 }
 
@@ -60,13 +60,20 @@ li.project {
 .reverse-text {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: end;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 p.tech-stack {
   font-size: 18px;
 }
+
+.project-link {
+  display: flex;
+  align-items: center;
+}
+
+/* <DiGithubFull size={24} style={{ marginRight: '8px' }} /> */
 
 @media (max-width: 1000px) {
   .about-me {
@@ -78,9 +85,9 @@ p.tech-stack {
     align-items: center;
   }
   .project-info {
-    align-items: start;
+    align-items: flex-start;
   }
   .project-links {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
