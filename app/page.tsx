@@ -34,7 +34,7 @@ export default function Home() {
   // }
   return (
     <main>
-      <div className={styles.main} id="intro">
+      <div className={styles.main}>
         <section className={styles.intro + ' sections'}>
           <p>Hi there, I&apos;m</p>
           <h1>Haruka Ogino</h1>

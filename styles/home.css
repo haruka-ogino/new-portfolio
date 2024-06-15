@@ -19,10 +19,11 @@
 .projects {
   align-items: start;
   justify-content: start;
+  height: auto;
 }
 
 .projects img {
-  width: 25em;
+  width: 35em;
 }
 
 li.project {

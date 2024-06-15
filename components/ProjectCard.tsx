@@ -18,10 +18,8 @@ export default function ProjectCard({ project, i }: Props) {
         <p>{project.description}</p>
       </div>
       <div className="project-visuals">
-        <img
-          src="https://www.ghibli-museum.jp/en/img/mainimg.png"
-          alt="placeholder for all"
-        />
+        <img src="/projects/lucas-mansion.gif" alt="placeholder for all" />
+        <br />
         <div className="project-links">
           <a href={project.githubRepo}>GitHub Repo</a>
           <a href={project.deployedLink}>Deployed Link</a>
