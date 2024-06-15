@@ -24,6 +24,7 @@
 
 .projects img {
   width: 35em;
+  min-width: 20em;
 }
 
 .projects h3 {
@@ -33,7 +34,6 @@
 .project {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   margin: 1em 0em;
 }
 
@@ -62,4 +62,22 @@ li.project {
   flex-direction: column;
   justify-content: start;
   align-items: end;
+}
+
+p.tech-stack {
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .project {
+    flex-direction: column;
+    margin: 1em 0em;
+    align-items: center;
+  }
+  .project-info {
+    align-items: start;
+  }
+  .project-links {
+    justify-content: end;
+  }
 }

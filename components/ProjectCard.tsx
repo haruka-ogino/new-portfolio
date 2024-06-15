@@ -14,30 +14,20 @@ export default function ProjectCard({ project, i }: Props) {
 
   return (
     <>
-      {/* {i % 2 === 0 && ( */}
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
         <h3>{type}</h3>
         <h2>{project.title}</h2>
         <p>{project.description}</p>
         <p className="tech-stack">{techStack}</p>
       </div>
-      {/* )} */}
       <div className="project-visuals">
-        <img src="/projects/lucas-mansion.gif" alt="placeholder for all" />
+        {/* <img src="/projects/lucas-mansion.gif" alt="placeholder for all" /> */}
         <br />
         <div className="project-links">
           <a href={project.githubRepo}>GitHub Repo</a>
           <a href={project.deployedLink}>Deployed Link</a>
         </div>
       </div>
-      {/* {i % 2 === 1 && (
-        <div className="project-info">
-          <h3>{type}</h3>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <p className="tech-stack">{techStack}</p>
-        </div>
-      )} */}
     </>
   )
 }
