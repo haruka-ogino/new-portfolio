@@ -36,6 +36,12 @@ export default function Projects() {
 
   console.log(projects)
 
+  function firstItem(index: number) {
+    if (index === 0) {
+      return { border: 'none' }
+    }
+  }
+
   return (
     <>
       <>
@@ -43,7 +49,11 @@ export default function Projects() {
       </>
       <ul>
         {projects.map((project, i) => (
-          <li key={i + 1} className={`project ${i % 2 === 1 && 'reverse'}`}>
+          <li
+            key={i + 1}
+            className={`project ${i % 2 === 1 ? 'reverse' : ''}`}
+            style={firstItem(i)}
+          >
             <ProjectCard project={project} i={i} />
           </li>
         ))}

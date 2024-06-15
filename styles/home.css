@@ -34,7 +34,7 @@
 .project {
   display: flex;
   flex-direction: row;
-  margin: 1em 0em;
+  padding: 1em 0em;
 }
 
 .reverse {
@@ -43,7 +43,7 @@
 
 li.project {
   display: flex;
-  border: 1px solid blue;
+  border-top: 1px solid #5ac4e1;
   justify-content: space-between;
 }
 
@@ -55,6 +55,11 @@ li.project {
 .project-links {
   display: flex;
   flex-direction: row;
+  margin-top: 5px;
+}
+
+.reverse-visuals {
+  align-items: flex-end;
 }
 
 .reverse-text {
@@ -72,8 +77,6 @@ p.tech-stack {
   display: flex;
   align-items: center;
 }
-
-/* <DiGithubFull size={24} style={{ marginRight: '8px' }} /> */
 
 @media (max-width: 1000px) {
   .about-me {

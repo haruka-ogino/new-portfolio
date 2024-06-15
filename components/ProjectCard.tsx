@@ -1,7 +1,7 @@
 import { IProject } from '@/models/projects'
 import '../styles/home.css'
 import { FaGithubSquare } from 'react-icons/fa'
-import { FaHandPointUp } from 'react-icons/fa'
+import { FaRegHandPointUp } from 'react-icons/fa'
 
 interface Props {
   project: IProject
@@ -22,16 +22,19 @@ export default function ProjectCard({ project, i }: Props) {
         <p>{project.description}</p>
         <p className="tech-stack">{techStack}</p>
       </div>
-      <div className="project-visuals">
+      <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
         <img src="/projects/lucas.gif" alt="placeholder for all" />
-        <br />
         <div className="project-links">
-          <a href={project.githubRepo} className="project-link">
+          <a
+            href={project.githubRepo}
+            className="project-link"
+            style={{ marginRight: '15px' }}
+          >
             <FaGithubSquare size={25} />
             GitHub
           </a>
           <a href={project.deployedLink} className="project-link">
-            <FaHandPointUp size={25} />
+            <FaRegHandPointUp size={20} />
             Deployed Link
           </a>
         </div>
