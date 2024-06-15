@@ -22,11 +22,21 @@
 }
 
 .projects img {
-  width: 5em;
+  width: 25em;
 }
 
 li.project {
   display: flex;
   border: 1px solid blue;
   justify-content: space-between;
+}
+
+.project-visuals {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
 }
