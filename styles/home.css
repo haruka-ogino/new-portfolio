@@ -14,12 +14,16 @@
 .about-me {
   display: flex;
   flex-direction: row;
+  animation: slideInBottom 0.5s ease-in 0s forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 45%;
 }
 
 .projects {
   align-items: flex-start;
   justify-content: flex-start;
   height: auto;
+  padding-top: 5em;
 }
 
 .projects img {
@@ -31,10 +35,18 @@
   display: flex;
   flex-direction: row;
   padding: 1em 0em;
+  animation: slideInRight 1s ease-in 0s forwards;
 }
 
 .reverse {
   flex-direction: row-reverse;
+  animation: slideInLeft 2s ease-in 0s forwards;
+}
+
+.project,
+.reverse {
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
 }
 
 li.project {
@@ -92,5 +104,38 @@ p.tech-stack {
   }
   .project-links {
     justify-content: flex-end;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(300px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(300px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
