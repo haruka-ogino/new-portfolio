@@ -91,6 +91,16 @@ p.tech-stack {
   align-items: center;
 }
 
+.schooling li,
+.work li {
+  margin-bottom: 0.5em;
+}
+
+.schooling,
+.work {
+  margin-bottom: 2em;
+}
+
 @media (max-width: 1000px) {
   .about-me {
     flex-direction: column;

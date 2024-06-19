@@ -4,7 +4,7 @@ export default function Experience() {
       <div>
         <h1>Work Experience</h1>{' '}
         <ul>
-          <li>
+          <li className="work">
             <h2>Temporary Site Administrator</h2>
             <div className="subtitle">
               <h3>Leighs Construction</h3>
@@ -17,7 +17,7 @@ export default function Experience() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="work">
             <h2>Overseas Experience in Japan</h2>
             <div className="subtitle">
               <h3>Various</h3>
@@ -35,7 +35,7 @@ export default function Experience() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="work">
             <h2>Site Engineer</h2>
             <div className="subtitle">
               <h3>HEB Construction</h3>
@@ -54,7 +54,7 @@ export default function Experience() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="work">
             <h2>Temporary Operations Administrator</h2>
             <div className="subtitle">
               <h3>Madison Recruitment for Meadowlark Jewellery</h3>
@@ -69,7 +69,7 @@ export default function Experience() {
               <li>- Assisted with packing and dispatch of orders.</li>
             </ul>
           </li>
-          <li>
+          <li className="work">
             <h2>Geotechnical Engineer</h2>
             <div className="subtitle">
               <h3>Pattle Delamore Partners Ltd</h3>
@@ -85,7 +85,7 @@ export default function Experience() {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="work">
             <h2>Graduate Site Engineer</h2>
             <div className="subtitle">
               <h3>Fulton Hogan for Northern Corridor Improvements (NCI)</h3>
