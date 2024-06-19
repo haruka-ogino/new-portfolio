@@ -20,7 +20,7 @@ export default function Experience() {
           <li>
             <h2>Overseas Experience in Japan</h2>
             <div className="subtitle">
-              <h3></h3>
+              <h3>Various</h3>
               <h4>Oct 2022 – Jun 2023</h4>
             </div>{' '}
             <ul>
