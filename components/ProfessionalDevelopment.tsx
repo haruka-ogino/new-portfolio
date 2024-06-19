@@ -2,7 +2,7 @@ export default function ProfessionalDevelopment() {
   return (
     <>
       <div>
-        <h1>ProfessionalDevelopment</h1>{' '}
+        <h1>Professional Development</h1>{' '}
       </div>
     </>
   )
