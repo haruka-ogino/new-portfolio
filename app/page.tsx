@@ -7,6 +7,7 @@ import { RefObject, useRef } from 'react'
 import '../styles/home.css'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
+import Nav from '@/components/Nav'
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,8 @@ export default function Home() {
   // }
   return (
     <main>
+      <Nav />
+
       <div className={styles.main}>
         <section className={styles.intro + ' sections'}>
           <p>Hi there, I&apos;m</p>
