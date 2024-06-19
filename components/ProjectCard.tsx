@@ -19,7 +19,7 @@ export default function ProjectCard({ project, i }: Props) {
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
         <h3>{type}</h3>
         <h2>{project.title}</h2>
-        <p className={`project-info ${i % 2 === 1 && 'reverse-desc'}`}>
+        <p className={`${i % 2 === 1 && 'reverse-desc'}`}>
           {project.description}
         </p>
         <p className="tech-stack">{techStack}</p>

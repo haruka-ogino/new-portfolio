@@ -38,7 +38,6 @@
 
 .projects img {
   width: 35em;
-  min-width: 20em;
 }
 
 .project {
@@ -147,20 +146,14 @@ p.tech-stack {
   }
 }
 
-/* @media (max-width: 630px) {
-  .intro {
-    margin-bottom: 1.5em;
+@media (max-width: 630px) {
+  .projects img {
+    width: 100%;
+    max-width: 25em;
+    height: auto;
+    min-width: 10em;
   }
-  .about-me {
-    flex-direction: column;
-  }
-  .project-info {
-    align-items: flex-start;
-  }
-  .project-links {
-    justify-content: flex-end;
-  }
-} */
+}
 
 @keyframes slideInLeft {
   from {
