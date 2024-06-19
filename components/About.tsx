@@ -3,8 +3,12 @@ import '../styles/home.css'
 export default function About() {
   return (
     <>
-      <div>
-        <h1>About Me</h1>{' '}
+      <section className="intro">
+        <p>Hi there, I&apos;m</p>
+        <h1>Haruka Ogino</h1>
+        <p>Full-stack Developer</p>
+      </section>
+      <div className="about-me">
         <p>
           I am a full-stack developer dedicated to personal and professional
           growth. Having transitioned from civil engineering, I have discovered
@@ -15,8 +19,8 @@ export default function About() {
           full-stack development, and continue to inspire and encourage women to
           pursue careers in STEM, especially in software engineering.{' '}
         </p>
+        <img src="/headshot.png" />
       </div>
-      <img src="/headshot.png" />
     </>
   )
 }

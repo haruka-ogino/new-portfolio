@@ -38,23 +38,7 @@ export default function Home() {
       <Nav sections={sections} />
 
       <div className={styles.main}>
-        <section className={styles.intro + ' sections'}>
-          <p>Hi there, I&apos;m</p>
-          <h1>Haruka Ogino</h1>
-          <p>Full-stack Developer</p>
-        </section>
-        {/* <aside className="sections">
-          <button className="buttons" onClick={() => scroll(aboutRef)}>
-            About Me
-          </button>
-          <button className="buttons" onClick={() => scroll(projectsRef)}>
-            Projects
-          </button>
-          <button className="buttons" onClick={() => scroll(eduRef)}>
-            Education
-          </button>
-        </aside> */}
-        <section className="sections about-me" ref={aboutRef}>
+        <section className="sections about" ref={aboutRef}>
           <About />
         </section>{' '}
         <section className="sections projects" ref={projectsRef}>
