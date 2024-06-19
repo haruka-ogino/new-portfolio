@@ -21,6 +21,8 @@ body {
   height: auto;
 }
 
+/* new media query required for smaller then 650px width */
+
 @media (max-width: 1000px) {
   body {
     width: 95%;
@@ -32,9 +34,14 @@ p {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   margin: 0em;
   padding: 0em;
+}
+
+h4 {
+  color: #1447a8;
 }
 
 ul {
@@ -52,6 +59,11 @@ a {
   text-decoration: none;
   color: inherit;
   margin: 0px;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons {

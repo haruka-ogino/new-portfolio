@@ -6,7 +6,10 @@ export default function Education() {
       <div>
         <h1>Education</h1>{' '}
         <h2>NZQA Level 6 Certificate in Applied Software Development</h2>
-        <h3>Dev Academy Aotearoa, Jan – May 2024</h3>
+        <div className="subtitle">
+          <h3>Dev Academy Aotearoa</h3>
+          <h4>Jan – May 2024</h4>
+        </div>
         <ul>
           <li>Intensive 17-week long full stack web development bootcamp.</li>
           <li>
@@ -21,7 +24,10 @@ export default function Education() {
           </li>
         </ul>
         <h2>Bachelor of Engineering (Honours)</h2>
-        <h3>The University of Auckland, 2016 – 2019</h3>
+        <div className="subtitle">
+          <h3>The University of Auckland</h3>
+          <h4>2016 – 2019</h4>
+        </div>
         <ul>
           <li>Civil and Environmental Engineering</li>
         </ul>

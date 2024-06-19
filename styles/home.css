@@ -19,7 +19,8 @@
   animation-range: entry 10% cover 45%;
 }
 
-.projects {
+.projects,
+.experience {
   align-items: flex-start;
   justify-content: flex-start;
   height: auto;
