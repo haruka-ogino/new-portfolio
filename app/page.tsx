@@ -10,24 +10,26 @@ import Experience from '@/components/Experience'
 import Nav from '@/components/Nav'
 
 export default function Home() {
+  // const navigate = useNavigate()
+  // function handleNavigate(link: string) {
+  //   navigate(`/${link}`)
+  // }
+
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
   const eduRef = useRef<HTMLDivElement>(null)
   const workRef = useRef<HTMLDivElement>(null)
 
-  const scroll = (id: RefObject<HTMLDivElement>) => {
-    if (id.current) {
-      id.current.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const sections = [
+    { section: 'About Me', sectionRef: aboutRef },
+    { section: 'Projects', sectionRef: projectsRef },
+    { section: 'Education', sectionRef: eduRef },
+    { section: 'Work Experience', sectionRef: workRef },
+  ]
 
-  // const navigate = useNavigate()
-  // function handleNavigate(link: string) {
-  //   navigate(`/${link}`)
-  // }
   return (
     <main>
-      <Nav />
+      <Nav sections={sections} />
 
       <div className={styles.main}>
         <section className={styles.intro + ' sections'}>
@@ -35,7 +37,7 @@ export default function Home() {
           <h1>Haruka Ogino</h1>
           <p>Full-stack Developer</p>
         </section>
-        <aside className="sections">
+        {/* <aside className="sections">
           <button className="buttons" onClick={() => scroll(aboutRef)}>
             About Me
           </button>
@@ -45,7 +47,7 @@ export default function Home() {
           <button className="buttons" onClick={() => scroll(eduRef)}>
             Education
           </button>
-        </aside>
+        </aside> */}
         <section className="sections about-me" ref={aboutRef}>
           <About />
         </section>{' '}
