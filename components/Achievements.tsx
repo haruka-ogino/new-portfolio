@@ -2,7 +2,7 @@ export default function Achievements() {
   return (
     <>
       <div>
-        <h1>Achievements</h1>{' '}
+        <h1>Extra-curricular Activities & Achievements</h1>{' '}
       </div>
     </>
   )
