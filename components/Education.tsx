@@ -20,13 +20,12 @@ export default function Education() {
             effective communication through exercises and retrospectives.
           </li>
         </ul>
-        <h2>Bachelor of Civil and Environmental Engineering (Honours)</h2>
+        <h2>Bachelor of Engineering (Honours)</h2>
         <h3>The University of Auckland, 2016 – 2019</h3>
-        Summer Research Scholarship, December 2017 – February 2018 Worked under
-        PhD candidate assisting in testing of old (singly reinforced) concrete
-        walls.
+        <ul>
+          <li>Civil and Environmental Engineering</li>
+        </ul>
       </div>
-      {/* <img src="/headshot.png" /> */}
     </>
   )
 }
