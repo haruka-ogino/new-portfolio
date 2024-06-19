@@ -3,23 +3,30 @@
 import About from '@/components/About'
 import styles from './page.module.css'
 import Projects from '@/components/Projects'
-import { useRef } from 'react'
+import { RefObject, useRef } from 'react'
 import '../styles/home.css'
 import Education from '@/components/Education'
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
+  const eduRef = useRef<HTMLDivElement>(null)
 
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  // const scrollToAbout = () => {
+  //   if (aboutRef.current) {
+  //     aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+  //   }
+  // }
 
-  const scrollToProjects = () => {
-    if (projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+  // const scrollToProjects = () => {
+  //   if (projectsRef.current) {
+  //     projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+  //   }
+  // }
+
+  const scroll = (id: RefObject<HTMLDivElement>) => {
+    if (id.current) {
+      id.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -42,11 +49,14 @@ export default function Home() {
           <p>Full-stack Developer</p>
         </section>
         <aside className="sections">
-          <button className="buttons" onClick={scrollToAbout}>
+          <button className="buttons" onClick={() => scroll(aboutRef)}>
             About Me
           </button>
-          <button className="buttons" onClick={scrollToProjects}>
+          <button className="buttons" onClick={() => scroll(projectsRef)}>
             Projects
+          </button>
+          <button className="buttons" onClick={() => scroll(eduRef)}>
+            Education
           </button>
         </aside>
         <section className="sections about-me" ref={aboutRef}>
@@ -55,7 +65,7 @@ export default function Home() {
         <section className="sections projects" ref={projectsRef}>
           <Projects />
         </section>{' '}
-        <section className="sections education">
+        <section className="sections education" ref={eduRef}>
           <Education />
         </section>{' '}
         {/* <section className="sections projects" ref={projectsRef}>
