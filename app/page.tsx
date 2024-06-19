@@ -6,11 +6,13 @@ import Projects from '@/components/Projects'
 import { RefObject, useRef } from 'react'
 import '../styles/home.css'
 import Education from '@/components/Education'
+import Experience from '@/components/Experience'
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLDivElement>(null)
   const eduRef = useRef<HTMLDivElement>(null)
+  const workRef = useRef<HTMLDivElement>(null)
 
   const scroll = (id: RefObject<HTMLDivElement>) => {
     if (id.current) {
@@ -50,9 +52,9 @@ export default function Home() {
         <section className="sections education" ref={eduRef}>
           <Education />
         </section>{' '}
-        {/* <section className="sections projects" ref={projectsRef}>
-          <Projects />
-        </section>{' '} */}
+        <section className="sections experience" ref={workRef}>
+          <Experience />
+        </section>{' '}
       </div>
     </main>
   )
