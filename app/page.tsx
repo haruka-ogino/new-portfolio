@@ -3,39 +3,16 @@
 import About from '@/components/About'
 import styles from './page.module.css'
 import Projects from '@/components/Projects'
-import { RefObject, useRef } from 'react'
 import '../styles/home.css'
 import Education from '@/components/Education'
 
 export default function Home() {
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
-  const eduRef = useRef<HTMLDivElement>(null)
-
-  // const scrollToAbout = () => {
-  //   if (aboutRef.current) {
-  //     aboutRef.current.scrollIntoView({ behavior: 'smooth' })
-  //   }
-  // }
-
-  // const scrollToProjects = () => {
-  //   if (projectsRef.current) {
-  //     projectsRef.current.scrollIntoView({ behavior: 'smooth' })
-  //   }
-  // }
-
-  const scroll = (id: RefObject<HTMLDivElement>) => {
-    if (id.current) {
-      id.current.scrollIntoView({ behavior: 'smooth' })
+  const handleClick = (id: string) => {
+    const heading = document.getElementById(id)
+    if (heading) {
+      heading.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
-  // const handleClick = (id: string) => {
-  //   const heading = document.getElementById(id)
-  //   if (heading) {
-  //     heading.scrollIntoView({ behavior: 'smooth' })
-  //   }
-  // }
   // const navigate = useNavigate()
   // function handleNavigate(link: string) {
   //   navigate(`/${link}`)
@@ -49,23 +26,23 @@ export default function Home() {
           <p>Full-stack Developer</p>
         </section>
         <aside className="sections">
-          <button className="buttons" onClick={() => scroll(aboutRef)}>
+          <button className="buttons" onClick={() => handleClick('about-me')}>
             About Me
           </button>
-          <button className="buttons" onClick={() => scroll(projectsRef)}>
+          <button className="buttons" onClick={() => handleClick('projects')}>
             Projects
           </button>
-          <button className="buttons" onClick={() => scroll(eduRef)}>
+          <button className="buttons" onClick={() => handleClick('education')}>
             Education
           </button>
         </aside>
-        <section className="sections about-me" ref={aboutRef}>
+        <section className="sections about-me" id="about-me">
           <About />
         </section>{' '}
-        <section className="sections projects" ref={projectsRef}>
+        <section className="sections projects" id="projects">
           <Projects />
         </section>{' '}
-        <section className="sections education" ref={eduRef}>
+        <section className="sections education" id="education">
           <Education />
         </section>{' '}
         {/* <section className="sections projects" ref={projectsRef}>
