@@ -133,6 +133,9 @@ p.tech-stack {
 }
 
 @media (max-width: 1000px) {
+  .intro {
+    margin-bottom: 1.5em;
+  }
   .about-me {
     flex-direction: column;
   }
@@ -143,6 +146,21 @@ p.tech-stack {
     justify-content: flex-end;
   }
 }
+
+/* @media (max-width: 630px) {
+  .intro {
+    margin-bottom: 1.5em;
+  }
+  .about-me {
+    flex-direction: column;
+  }
+  .project-info {
+    align-items: flex-start;
+  }
+  .project-links {
+    justify-content: flex-end;
+  }
+} */
 
 @keyframes slideInLeft {
   from {
