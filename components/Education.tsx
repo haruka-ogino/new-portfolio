@@ -12,9 +12,11 @@ export default function Education() {
             <h4>Jan – May 2024</h4>
           </div>
           <ul>
-            <li>Intensive 17-week long full stack web development bootcamp.</li>
             <li>
-              Successfully completed multiple projects in-class as well as
+              - Intensive 17-week long full stack web development bootcamp.
+            </li>
+            <li>
+              - Successfully completed multiple projects in-class as well as
               personal ones, using{' '}
               <b>
                 HTML, CSS, JavaScript and TypeScript, Git, React.js, RESTful
@@ -23,7 +25,7 @@ export default function Education() {
               </b>
             </li>
             <li>
-              Developed interpersonal skills in collaboration, empathy, and
+              - Developed interpersonal skills in collaboration, empathy, and
               effective communication through exercises and retrospectives.
             </li>
           </ul>
