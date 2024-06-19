@@ -110,14 +110,31 @@ p.tech-stack {
   margin-bottom: 2em;
 }
 
-@media (max-width: 1000px) {
-  .about-me {
-    flex-direction: column;
-  }
+@media (max-width: 1300px) {
   .project {
     flex-direction: column;
     margin: 1em 0em;
     align-items: center;
+    animation: none;
+  }
+  .reverse {
+    flex-direction: column;
+    animation: none;
+  }
+
+  .reverse-visuals,
+  .reverse-text {
+    align-items: flex-start;
+  }
+
+  .reverse-desc {
+    text-align: start;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-me {
+    flex-direction: column;
   }
   .project-info {
     align-items: flex-start;

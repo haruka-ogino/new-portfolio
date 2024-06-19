@@ -29,7 +29,7 @@ export default function Home() {
     { section: 'Projects', sectionRef: projectsRef },
     { section: 'Education', sectionRef: eduRef },
     { section: 'Work Experience', sectionRef: workRef },
-    { section: 'Professional Development', sectionRef: developmentRef },
+    // { section: 'Professional Development', sectionRef: developmentRef },
     { section: 'Extra-curriculars', sectionRef: extrasRef },
   ]
 
@@ -50,9 +50,9 @@ export default function Home() {
         <section className="sections experience" ref={workRef}>
           <Experience />
         </section>{' '}
-        <section className="sections development" ref={developmentRef}>
+        {/* <section className="sections development" ref={developmentRef}>
           <ProfessionalDevelopment />
-        </section>{' '}
+        </section>{' '} */}
         <section className="sections achievements" ref={extrasRef}>
           <Achievements />
         </section>{' '}
