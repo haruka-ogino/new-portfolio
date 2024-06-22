@@ -1,0 +1,38 @@
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: rgb(237, 254, 255);
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* jigsaw popups styling */
+
+#close button {
+  color: rgb(237, 254, 255);
+  background-color: rgb(5, 97, 102);
+}
+
+#close {
+  border-radius: 10px;
+  font-size: 2em;
+  min-height: 1em;
+  min-width: 1.3em;
+  padding: 0em;
+  margin: 0em;
+  position: relative;
+  right: -6em;
+}

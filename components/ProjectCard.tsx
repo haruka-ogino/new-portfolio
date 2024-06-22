@@ -2,6 +2,7 @@ import { IProject } from '@/models/projects'
 import '../styles/home.css'
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaRegHandPointUp } from 'react-icons/fa'
+import { useState } from 'react'
 
 interface Props {
   project: IProject
@@ -13,6 +14,7 @@ export default function ProjectCard({ project, i }: Props) {
   // const techStack = ['React', 'Node.js', 'Tailwind']
   const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
+  const [show, setShow] = useState(false)
 
   return (
     <>
@@ -40,10 +42,17 @@ export default function ProjectCard({ project, i }: Props) {
             <FaGithubSquare size={25} />
             GitHub
           </a>
-          <a href={project.deployedLink} className="project-link">
-            <FaRegHandPointUp size={20} />
-            Deployed Link
-          </a>
+          {project.deployedLink === '' ? (
+            <a href={project.deployedLink} className="project-link">
+              <FaRegHandPointUp size={20} />
+              Deployed Link
+            </a>
+          ) : (
+            <p onClick={() => setShow(true)}>
+              <FaRegHandPointUp size={20} />
+              Deployed Link
+            </p>
+          )}
         </div>
       </div>
     </>
