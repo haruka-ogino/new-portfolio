@@ -31,7 +31,11 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
         <p className={`${i % 2 === 1 && 'reverse-desc'}`}>
           {project.description}
         </p>
-        <p className="tech-stack">{techStack}</p>
+        <ul className="tech-stack">
+          {techStack.map((tech, i) => (
+            <li key={i}>{tech}</li>
+          ))}
+        </ul>
       </div>
       <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
         <img

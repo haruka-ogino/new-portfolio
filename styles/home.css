@@ -90,8 +90,17 @@ li.project {
   text-align: end;
 }
 
-p.tech-stack {
+.tech-stack {
   font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-stack li {
+  border: 2px solid #5ac4e1;
+  padding: 0px 10px;
+  border-radius: 20px;
+  margin: 2px;
 }
 
 .project-link {
