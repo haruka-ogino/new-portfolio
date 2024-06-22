@@ -14,7 +14,7 @@ interface Props {
 }
 
 export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
-  const techStack = ['React', 'Node.js', 'Tailwind']
+  const techStack = ['React', 'Node.js', 'Tailwind', 'Next.js', 'SQLite']
   // const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
 
@@ -31,7 +31,7 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
         <p className={`${i % 2 === 1 && 'reverse-desc'}`}>
           {project.description}
         </p>
-        <ul className="tech-stack">
+        <ul className={`tech-stack  ${i % 2 === 1 && 'reverse-stack'}`}>
           {techStack.map((tech, i) => (
             <li key={i}>{tech}</li>
           ))}

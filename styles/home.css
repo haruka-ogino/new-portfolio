@@ -103,6 +103,10 @@ li.project {
   margin: 2px;
 }
 
+.reverse-stack {
+  flex-direction: row-reverse;
+}
+
 .project-link {
   display: flex;
   align-items: center;
