@@ -10,8 +10,13 @@ import Experience from '@/components/Experience'
 import Nav from '@/components/Nav'
 import ProfessionalDevelopment from '@/components/ProfessionalDevelopment'
 import Achievements from '@/components/Achievements'
+import verticalScroll from '@/hooks/verticalScroll'
+import PopUp from '@/components/ProjectPopup'
 
 export default function Home() {
+  const [show, setShow] = useState(false)
+
+  verticalScroll(show)
   // const navigate = useNavigate()
   // function handleNavigate(link: string) {
   //   navigate(`/${link}`)
@@ -36,13 +41,19 @@ export default function Home() {
   return (
     <main>
       <Nav sections={sections} />
-
+      {show && (
+        <div className="popup-overlay" onClick={() => setShow(false)}>
+          <div className="popup" onClick={(e) => e.stopPropagation()}>
+            <PopUp setShow={setShow} />
+          </div>
+        </div>
+      )}
       <div className={styles.main}>
         <section className="sections about" ref={aboutRef}>
           <About />
         </section>{' '}
         <section className="sections projects" ref={projectsRef}>
-          <Projects />
+          <Projects show={show} setShow={setShow} />
         </section>{' '}
         <section className="sections education" ref={eduRef}>
           <Education />

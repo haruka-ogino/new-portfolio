@@ -5,7 +5,12 @@ import { IProject } from '@/models/projects'
 import { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 
-export default function Projects() {
+interface Props {
+  show: boolean
+  setShow: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Projects({ show, setShow }: Props) {
   const [projects, setProjects] = useState<IProject[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -54,25 +59,14 @@ export default function Projects() {
             className={`project ${i % 2 === 1 ? 'reverse' : ''}`}
             style={firstItem(i)}
           >
-            <ProjectCard project={project} i={i} />
+            <ProjectCard
+              project={project}
+              i={i}
+              show={show}
+              setShow={setShow}
+            />
           </li>
         ))}
-        {/* <li>
-          THIS IS HELLLLLTHIS IS HELLLLLTHIS IS HELLLLLTHIS IS HELLLLLTHIS IS
-          HELLLLLTHIS IS HELLLLL
-        </li>
-        <li>
-          THIS IS HELLTHIS IS HELLLLLTHIS IS HELLLLLTHIS IS HELLLLLTHIS IS
-          HELLLLLLLL
-        </li>
-        <li>
-          THISTHIS ISTHIS IS HELLLLLTHIS IS HELLLLL HELLLLLTHIS IS HELLLLLTHIS
-          IS HELLLLL IS HELLLLL
-        </li>
-        <li>
-          TTHIS IS HELLLLLTHIS IS HELLLLLHIS ITHIS IS HELLLLLTHIS IS HELLLLLTHIS
-          IS HELLLLLS HELLLLL
-        </li> */}
       </ul>
     </>
   )
