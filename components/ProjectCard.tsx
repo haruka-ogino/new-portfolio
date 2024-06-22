@@ -3,6 +3,7 @@ import '../styles/home.css'
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaRegHandPointUp } from 'react-icons/fa'
 import { useState } from 'react'
+import PopUp from './ProjectPopup'
 
 interface Props {
   project: IProject
@@ -18,6 +19,13 @@ export default function ProjectCard({ project, i }: Props) {
 
   return (
     <>
+      {show && (
+        <div className="popup-overlay" onClick={() => setShow(false)}>
+          <div className="popup" onClick={(e) => e.stopPropagation()}>
+            <PopUp setShow={setShow} />
+          </div>
+        </div>
+      )}
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
         <h3>{type}</h3>
         <h2>{project.title}</h2>

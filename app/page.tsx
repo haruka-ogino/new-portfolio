@@ -3,7 +3,7 @@
 import About from '@/components/About'
 import styles from './page.module.css'
 import Projects from '@/components/Projects'
-import { RefObject, useRef } from 'react'
+import { RefObject, useRef, useState } from 'react'
 import '../styles/home.css'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
