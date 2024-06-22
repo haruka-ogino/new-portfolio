@@ -6,7 +6,7 @@ interface Props {
 
 export default function PopUp({ setShow }: Props) {
   return (
-    <div>
+    <>
       <button id="close" onClick={() => setShow(false)}>
         x
       </button>
@@ -14,6 +14,6 @@ export default function PopUp({ setShow }: Props) {
         This Project is currently undergoing development and has yet to be
         deployed.
       </h2>
-    </div>
+    </>
   )
 }
