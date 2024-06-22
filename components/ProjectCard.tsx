@@ -2,41 +2,24 @@ import { IProject } from '@/models/projects'
 import '../styles/home.css'
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaRegHandPointUp } from 'react-icons/fa'
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import PopUp from './ProjectPopup'
 
 interface Props {
   project: IProject
   i: number
 
-  show: boolean
-  setShow: React.Dispatch<React.SetStateAction<boolean>>
+  setShow: Dispatch<SetStateAction<boolean>>
+  setTitle: Dispatch<SetStateAction<string>>
 }
 
-export default function ProjectCard({ project, i, show, setShow }: Props) {
-  // declare some placeholders
+export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
   // const techStack = ['React', 'Node.js', 'Tailwind']
   const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
-  // const [show, setShow] = useState(false)
-
-  // useEffect(() => {
-  //   if (show) {
-  //     document.body.style.overflowY = 'hidden'
-  //   } else {
-  //     document.body.style.overflowY = 'auto'
-  //   }
-  // }, [show])
 
   return (
     <>
-      {/* {show && (
-        <div className="popup-overlay" onClick={() => setShow(false)}>
-          <div className="popup" onClick={(e) => e.stopPropagation()}>
-            <PopUp setShow={setShow} />
-          </div>
-        </div>
-      )} */}
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
         <h3>{type}</h3>
         <h2>{project.title}</h2>
@@ -61,7 +44,7 @@ export default function ProjectCard({ project, i, show, setShow }: Props) {
             <FaGithubSquare size={25} />
             GitHub
           </a>
-          {project.deployedLink === '' ? (
+          {project.deployedLink !== '' ? (
             <a href={project.deployedLink} className="project-link">
               <FaRegHandPointUp size={20} />
               Deployed Link

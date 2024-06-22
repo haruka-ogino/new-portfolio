@@ -2,15 +2,15 @@
 import '../styles/home.css'
 
 import { IProject } from '@/models/projects'
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 
 interface Props {
-  show: boolean
-  setShow: React.Dispatch<React.SetStateAction<boolean>>
+  setShow: Dispatch<SetStateAction<boolean>>
+  setTitle: Dispatch<SetStateAction<string>>
 }
 
-export default function Projects({ show, setShow }: Props) {
+export default function Projects({ setShow, setTitle }: Props) {
   const [projects, setProjects] = useState<IProject[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -62,8 +62,8 @@ export default function Projects({ show, setShow }: Props) {
             <ProjectCard
               project={project}
               i={i}
-              show={show}
               setShow={setShow}
+              setTitle={setTitle}
             />
           </li>
         ))}

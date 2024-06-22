@@ -15,6 +15,7 @@ import PopUp from '@/components/ProjectPopup'
 
 export default function Home() {
   const [show, setShow] = useState(false)
+  const [popupTitle, setPopupTitle] = useState('')
 
   verticalScroll(show)
   // const navigate = useNavigate()
@@ -44,7 +45,7 @@ export default function Home() {
       {show && (
         <div className="popup-overlay" onClick={() => setShow(false)}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>
-            <PopUp setShow={setShow} />
+            <PopUp setShow={setShow} title={popupTitle} />
           </div>
         </div>
       )}
@@ -53,7 +54,7 @@ export default function Home() {
           <About />
         </section>{' '}
         <section className="sections projects" ref={projectsRef}>
-          <Projects show={show} setShow={setShow} />
+          <Projects setShow={setShow} setTitle={setPopupTitle} />
         </section>{' '}
         <section className="sections education" ref={eduRef}>
           <Education />
