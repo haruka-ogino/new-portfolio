@@ -8,7 +8,7 @@ interface Props {
 export default function PopUp({ setShow, title }: Props) {
   return (
     <>
-      <h2>{title}</h2>
+      <h2 className="popup-title">{title}</h2>
       <button id="close" onClick={() => setShow(false)}>
         x
       </button>
