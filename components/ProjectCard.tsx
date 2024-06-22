@@ -2,7 +2,7 @@ import { IProject } from '@/models/projects'
 import '../styles/home.css'
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaRegHandPointUp } from 'react-icons/fa'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PopUp from './ProjectPopup'
 
 interface Props {
@@ -16,6 +16,14 @@ export default function ProjectCard({ project, i }: Props) {
   const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
   const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflowY = 'hidden'
+    } else {
+      document.body.style.overflowY = 'auto'
+    }
+  }, [show])
 
   return (
     <>

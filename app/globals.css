@@ -10,6 +10,8 @@ html {
 
 body {
   display: flex;
+  overflow-y: hidden;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
