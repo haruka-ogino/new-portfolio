@@ -18,6 +18,11 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
   const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
 
+  function openPopup() {
+    setShow(true)
+    setTitle(project.title)
+  }
+
   return (
     <>
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
@@ -50,7 +55,7 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
               Deployed Link
             </a>
           ) : (
-            <p onClick={() => setShow(true)}>
+            <p onClick={openPopup}>
               <FaRegHandPointUp size={20} />
               Deployed Link
             </p>
