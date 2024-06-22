@@ -14,8 +14,8 @@ interface Props {
 }
 
 export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
-  // const techStack = ['React', 'Node.js', 'Tailwind']
-  const techStack = ['React, Node.js, Tailwind']
+  const techStack = ['React', 'Node.js', 'Tailwind']
+  // const techStack = ['React, Node.js, Tailwind']
   const type = 'Group project'
 
   function openPopup() {
@@ -34,7 +34,6 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
         <p className="tech-stack">{techStack}</p>
       </div>
       <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
-        {/* <img src="/projects/lucas-mansion.gif" alt="placeholder for all" /> */}
         <img
           src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmY3ZHV2OTFueHl3aTFiMHY2NjJkMDV2bzI0cjNyZWswOHUxZ2U3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qj8HrmcHaqlqB76jbq/giphy.gif"
           alt="placeholder for all"
