@@ -97,10 +97,11 @@ li.project {
 }
 
 .tech-stack li {
-  border: 2px solid #5ac4e1;
-  padding: 0px 10px;
+  background-color: #27caf3;
+  padding: 1px 15px;
   border-radius: 20px;
   margin: 2px;
+  color: #fbfdfe;
 }
 
 .reverse-stack {

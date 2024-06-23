@@ -38,10 +38,7 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
         </ul>
       </div>
       <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
-        <img
-          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmY3ZHV2OTFueHl3aTFiMHY2NjJkMDV2bzI0cjNyZWswOHUxZ2U3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qj8HrmcHaqlqB76jbq/giphy.gif"
-          alt="placeholder for all"
-        />
+        <img src={project.img} alt={project.alt} />
 
         <div className="project-links">
           <a
