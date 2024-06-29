@@ -1,6 +1,17 @@
 import '../styles/home.css'
 
 export default function About() {
+  const links = [
+    {
+      name: 'LinkedIn',
+      link: 'https://nz.linkedin.com/in/haruka-ogino-769540148',
+    },
+    { name: 'GitHub', link: 'https://github.com/haruka-ogino' },
+    { name: 'CV', link: '/Haruka-Ogino-CV.pdf' },
+  ]
+
+  // window.open('/Haruka-Ogino-CV.pdf', '_blank')
+
   return (
     <>
       <section className="intro">
@@ -21,6 +32,13 @@ export default function About() {
         </p>
         <img src="/headshot.png" />
       </div>
+      <section className="my-links">
+        {links.map((link, i) => (
+          <a key={i} href={link.link}>
+            {link.name}
+          </a>
+        ))}
+      </section>
     </>
   )
 }
