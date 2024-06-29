@@ -14,12 +14,6 @@
 .about {
   align-items: flex-start;
   animation: slideInTop 2s;
-  /* ease-in 0s forwards; */
-  /* animation-timeline: view();
-  animation-range: entry 10% cover 45%; */
-  /* animation: reveal linear both;
-  animation-timeline: view(block);
-  animation-range: cover 15% cover 55%; */
 }
 
 .intro {
@@ -30,7 +24,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* animation: slideInTop 2s; */
 }
 
 .projects,
@@ -49,18 +42,10 @@
   display: flex;
   flex-direction: row;
   padding: 1em 0em;
-  animation: slideInRight 2s ease-in;
 }
 
 .reverse {
   flex-direction: row-reverse;
-  animation: slideInLeft 2s ease-in;
-}
-
-.project,
-.reverse {
-  animation-timeline: view();
-  animation-range: entry 0% cover 25%;
 }
 
 li.project {
@@ -133,11 +118,9 @@ li.project {
     flex-direction: column;
     margin: 1em 0em;
     align-items: center;
-    /* animation: none; */
   }
   .reverse {
     flex-direction: column;
-    /* animation: none; */
   }
 
   .reverse-visuals,
@@ -174,28 +157,6 @@ li.project {
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-150px);
-    opacity: 0.5;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(150px);
-    opacity: 0.3;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes slideInTop {
   from {
     transform: translateY(-300px);
@@ -205,19 +166,4 @@ li.project {
     transform: translateY(0px);
     opacity: 1;
   }
-}
-
-@keyframes exampleAnimation {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-.animatedElement {
-  animation: exampleAnimation 2s;
-  /* animation-timeline: view(block);
-  animation-range: cover 15% cover 55%; */
 }
