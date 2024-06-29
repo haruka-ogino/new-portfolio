@@ -13,7 +13,7 @@
 
 .about {
   align-items: flex-start;
-  animation: slideInTop 2s;
+  animation: slideInTop 1s;
 }
 
 .intro {
@@ -29,10 +29,17 @@
 section.my-links {
   margin: 1em 0em;
   display: flex;
+  align-items: center;
 }
 
 .my-links a {
   margin-right: 10px;
+  color: #367f9a;
+}
+
+.my-links a:hover svg {
+  transition: 200ms ease-in;
+  color: #6dcff6;
 }
 
 .projects,

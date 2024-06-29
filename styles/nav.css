@@ -63,3 +63,9 @@
     width: 95%;
   }
 }
+
+@media (max-width: 630px) {
+  .nav {
+    width: 100%;
+  }
+}
