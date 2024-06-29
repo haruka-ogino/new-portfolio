@@ -16,6 +16,9 @@
   animation: slideInBottom 0.5s ease-in 0s forwards;
   animation-timeline: view();
   animation-range: entry 10% cover 45%;
+  animation: reveal linear both;
+  animation-timeline: view(block);
+  animation-range: cover 15% cover 55%;
 }
 
 .intro {
@@ -128,11 +131,11 @@ li.project {
     flex-direction: column;
     margin: 1em 0em;
     align-items: center;
-    animation: none;
+    /* animation: none; */
   }
   .reverse {
     flex-direction: column;
-    animation: none;
+    /* animation: none; */
   }
 
   .reverse-visuals,
@@ -200,4 +203,19 @@ li.project {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+
+@keyframes exampleAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.animatedElement {
+  animation: reveal linear both;
+  animation-timeline: view(block);
+  animation-range: cover 15% cover 55%;
 }

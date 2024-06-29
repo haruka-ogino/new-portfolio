@@ -1,7 +1,7 @@
 export default function Achievements() {
   return (
     <>
-      <div>
+      <div className="animatedElement">
         <h1>Extra-curricular Activities & Achievements</h1>{' '}
         <h3>Provoke Hack to the Future: A Generative AI Hackathon</h3>
         <h4>May 2024</h4>
