@@ -18,7 +18,11 @@ export default function Nav({ sections }: Props) {
   return (
     <nav id="nav" className="nav">
       {sections.map((section, i) => (
-        <button className="buttons" onClick={() => scroll(section.sectionRef)}>
+        <button
+          key={`button-${i}`}
+          className="buttons"
+          onClick={() => scroll(section.sectionRef)}
+        >
           {section.section}
         </button>
       ))}
