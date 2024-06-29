@@ -47,18 +47,18 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
             style={{ marginRight: '15px' }}
           >
             <FaGithubSquare size={25} />
-            GitHub
+            <p>GitHub</p>
           </a>
           {project.deployedLink !== '' ? (
             <a href={project.deployedLink} className="project-link">
               <FaRegHandPointUp size={20} />
-              Deployed Link
+              <p>Deployed Link</p>
             </a>
           ) : (
-            <p onClick={openPopup}>
+            <div onClick={openPopup} style={{ display: 'flex' }}>
               <FaRegHandPointUp size={20} />
-              Deployed Link
-            </p>
+              <p>Deployed Link</p>
+            </div>
           )}
         </div>
       </div>
