@@ -40,6 +40,9 @@ body {
     justify-content: flex-start;
     overflow-x: hidden;
   }
+  .subtitle {
+    flex-direction: column;
+  }
 }
 
 p {

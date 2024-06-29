@@ -13,9 +13,10 @@
 
 .about {
   align-items: flex-start;
-  animation: slideInBottom 2s ease-in 0s forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 45%;
+  animation: slideInTop 2s;
+  /* ease-in 0s forwards; */
+  /* animation-timeline: view();
+  animation-range: entry 10% cover 45%; */
   /* animation: reveal linear both;
   animation-timeline: view(block);
   animation-range: cover 15% cover 55%; */
@@ -29,6 +30,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* animation: slideInTop 2s; */
 }
 
 .projects,
@@ -47,12 +49,12 @@
   display: flex;
   flex-direction: row;
   padding: 1em 0em;
-  animation: slideInRight 1s ease-in 0s forwards;
+  animation: slideInRight 2s ease-in;
 }
 
 .reverse {
   flex-direction: row-reverse;
-  animation: slideInLeft 2s ease-in 0s forwards;
+  animation: slideInLeft 2s ease-in;
 }
 
 .project,
@@ -194,9 +196,9 @@ li.project {
   }
 }
 
-@keyframes slideInBottom {
+@keyframes slideInTop {
   from {
-    transform: translateY(300px);
+    transform: translateY(-300px);
     opacity: 0.3;
   }
   to {
