@@ -22,12 +22,13 @@
 
 .about-me {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
 }
 
 section.my-links {
-  margin: 0em;
+  margin: 1em 0em;
+  display: flex;
 }
 
 .my-links a {
@@ -130,14 +131,15 @@ li.project {
   .reverse {
     flex-direction: column;
   }
-
   .reverse-visuals,
   .reverse-text {
     align-items: flex-start;
   }
-
   .reverse-desc {
     text-align: start;
+  }
+  .reverse-stack {
+    justify-content: flex-start;
   }
 }
 
@@ -147,6 +149,10 @@ li.project {
   }
   .about-me {
     flex-direction: column;
+    text-align: center;
+  }
+  section.my-links {
+    justify-content: center;
   }
   .project-info {
     align-items: flex-start;
