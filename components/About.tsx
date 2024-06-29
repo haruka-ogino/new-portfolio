@@ -1,4 +1,5 @@
 import '../styles/home.css'
+import { FaLinkedin, FaGithubSquare, FaFileAlt } from 'react-icons/fa'
 
 export default function About() {
   const links = [
@@ -9,8 +10,6 @@ export default function About() {
     { name: 'GitHub', link: 'https://github.com/haruka-ogino' },
     { name: 'CV', link: '/Haruka-Ogino-CV.pdf' },
   ]
-
-  // window.open('/Haruka-Ogino-CV.pdf', '_blank')
 
   return (
     <>
@@ -35,7 +34,14 @@ export default function About() {
       <section className="my-links">
         {links.map((link, i) => (
           <a key={i} href={link.link}>
-            {link.name}
+            {link.name === 'LinkedIn' && (
+              <FaLinkedin size={35} style={{ marginBottom: '-2px' }} />
+            )}
+            {link.name === 'GitHub' && (
+              <FaGithubSquare size={35} style={{ marginBottom: '-2px' }} />
+            )}
+            {link.name === 'CV' && <FaFileAlt size={30} />}
+            {/* {link.name} */}
           </a>
         ))}
       </section>

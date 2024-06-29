@@ -26,6 +26,14 @@
   align-items: center;
 }
 
+section.my-links {
+  margin: 0em;
+}
+
+.my-links a {
+  margin-right: 10px;
+}
+
 .projects,
 .experience {
   align-items: flex-start;

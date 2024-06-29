@@ -1,7 +1,6 @@
 import { IProject } from '@/models/projects'
 import '../styles/home.css'
-import { FaGithubSquare } from 'react-icons/fa'
-import { FaRegHandPointUp } from 'react-icons/fa'
+import { FaGithubSquare, FaRegHandPointUp } from 'react-icons/fa'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import PopUp from './ProjectPopup'
 
