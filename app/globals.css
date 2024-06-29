@@ -88,7 +88,8 @@ a {
   margin: 0.2em 0em 0.5em 0em;
 }
 
-.subtitle h3 {
+.subtitle h3,
+.project-info h3 {
   color: #1455a8;
   font-weight: 500;
 }

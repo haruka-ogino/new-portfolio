@@ -63,6 +63,15 @@ li.project {
   justify-content: space-between;
 }
 
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h2 {
+  margin: 0.3em 0em;
+}
+
 .project-visuals {
   display: flex;
   flex-direction: column;
@@ -93,6 +102,7 @@ li.project {
   font-size: 18px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0.5em;
 }
 
 .tech-stack li {
@@ -132,9 +142,14 @@ li.project {
     flex-direction: column;
   }
   .reverse-visuals,
-  .reverse-text {
-    align-items: flex-start;
+  .reverse-text,
+  .project-info,
+  .project-visuals {
+    align-items: center;
   }
+  /* .reverse-text {
+    align-items: flex-start;
+  } */
   .reverse-desc {
     text-align: start;
   }
@@ -153,12 +168,6 @@ li.project {
   }
   section.my-links {
     justify-content: center;
-  }
-  .project-info {
-    align-items: flex-start;
-  }
-  .project-links {
-    justify-content: flex-end;
   }
 }
 

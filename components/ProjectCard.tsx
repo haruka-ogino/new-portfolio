@@ -38,7 +38,6 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
       </div>
       <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
         <img src={project.img} alt={project.alt} />
-
         <div className="project-links">
           <a
             href={project.githubRepo}
