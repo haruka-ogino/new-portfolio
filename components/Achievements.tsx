@@ -3,6 +3,17 @@ export default function Achievements() {
     <>
       <div>
         <h1>Extra-curricular Activities & Achievements</h1>{' '}
+        <h3>Provoke Hack to the Future: A Generative AI Hackathon</h3>
+        <h4>May 2024</h4>
+        <ul>
+          <li>
+            <strong>First place</strong> with 'AItinerary', an app for
+            centralising meetings and suggesting activities using AI.
+          </li>
+          <li>
+            Currently working on this app independently to later deploy it.
+          </li>
+        </ul>
         <h3>Women in Engineering Network (WEN)</h3>
         <h4>2017 - 2021</h4>
         <ul>
