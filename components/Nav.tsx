@@ -46,17 +46,23 @@ export default function Nav({ sections }: Props) {
         Back to the top
       </button> */}
       </nav>
-      <nav className="small-nav small-hidden">
+      <nav className="small-hidden">
         {/* <div onClick={() => setOpen((prevOpen) => !prevOpen)}> */}
         {!open ? (
-          <div className="open-icon" onClick={() => setOpen(true)}>
-            <h5>━</h5>
-            <h5>━</h5>
-            <h5>━</h5>
+          <div className="small-nav" onClick={() => setOpen(true)}>
+            <div id="open-icon">
+              <h5>━</h5>
+              <h5>━</h5>
+              <h5>━</h5>
+            </div>
           </div>
         ) : (
           <>
-            <div id="close-icon" onClick={() => setOpen(false)}>
+            <div
+              className="small-nav"
+              id="close-icon"
+              onClick={() => setOpen(false)}
+            >
               <h5>x</h5>
             </div>
             <div className="nav-items">

@@ -89,7 +89,7 @@
   display: flex;
   flex-direction: row-reverse;
 }
-
+/* 
 .small-nav::before {
   content: '';
   position: fixed;
@@ -99,7 +99,7 @@
   bottom: -5px;
   background: linear-gradient(to right, #1be2c7, #47d2f5);
   z-index: -5;
-}
+} */
 
 .small-nav h5 {
   background: linear-gradient(to right, #1be264, #47bef5);
