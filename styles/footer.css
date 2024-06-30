@@ -26,3 +26,9 @@ footer {
   padding: 0px;
   margin-bottom: 1em;
 }
+
+.footer-links a:hover svg,
+.footer-links a:hover p {
+  transition: 200ms ease-in;
+  color: #6dcff6;
+}

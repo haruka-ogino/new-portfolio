@@ -1,4 +1,9 @@
-import { FaLinkedin, FaGithubSquare, FaFileAlt } from 'react-icons/fa'
+import {
+  FaLinkedin,
+  FaGithubSquare,
+  FaFileAlt,
+  FaEnvelope,
+} from 'react-icons/fa'
 import '../styles/footer.css'
 export default function Footer() {
   const links = [
@@ -15,17 +20,28 @@ export default function Footer() {
         <section className="contact-info">
           <h3>Haruka Ogino</h3>
           <h4>Full-stack Developer</h4>
-          <a href="mailto:harukariq@gmail.com" target="_blank" rel="noreferrer">
-            harukariq@gmail.com
-          </a>
         </section>
         <section className="footer-links">
+          <a
+            href="mailto:harukariq@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            style={{ marginLeft: '2px' }}
+          >
+            <FaEnvelope size={24} />
+            <p style={{ marginLeft: '2px' }}>{'harukariq@gmail.com'}</p>
+          </a>
           {links.map((link, i) => (
             <a key={i} href={link.link}>
               {link.name === 'LinkedIn' && <FaLinkedin size={28} />}
               {link.name === 'GitHub' && <FaGithubSquare size={28} />}
-              {link.name === 'CV' && <FaFileAlt size={25} />}
-              <p style={{ fontSize: '18px' }}>{link.name}</p>
+              {link.name === 'CV' && (
+                <FaFileAlt
+                  size={25}
+                  style={{ marginLeft: '1.5px', marginRight: '1.5px' }}
+                />
+              )}
+              <p>{link.name}</p>
             </a>
           ))}
         </section>
