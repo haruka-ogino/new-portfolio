@@ -5,6 +5,7 @@ import {
   FaEnvelope,
 } from 'react-icons/fa'
 import '../styles/footer.css'
+import { useRef } from 'react'
 export default function Footer() {
   const links = [
     {
@@ -16,7 +17,7 @@ export default function Footer() {
   ]
   return (
     <>
-      <footer>
+      <footer id="footer">
         <div style={{ marginRight: '8em' }}>
           <section className="name">
             <h3>Haruka Ogino</h3>

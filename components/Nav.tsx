@@ -10,14 +10,26 @@ interface Props {
 }
 
 export default function Nav({ sections }: Props) {
+  const [open, setOpen] = useState(false)
+
+  const closeNav = () => {
+    setOpen(false)
+  }
+
   const scroll = (id: RefObject<HTMLDivElement>) => {
     if (id.current) {
       id.current.scrollIntoView({ behavior: 'smooth' })
     }
+    closeNav()
   }
 
-  const [open, setOpen] = useState(false)
-  console.log(open)
+  const scrollToFooter = () => {
+    const footerElement = document.getElementById('footer')
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' })
+    }
+    closeNav()
+  }
 
   return (
     <>
@@ -59,7 +71,7 @@ export default function Nav({ sections }: Props) {
         ) : (
           <>
             <div className="small-nav" id="small-navbar">
-              <div id="close-icon" onClick={() => setOpen(false)}>
+              <div id="close-icon" onClick={closeNav}>
                 <h5>x</h5>
               </div>
               <div className="nav-items">
@@ -72,6 +84,12 @@ export default function Nav({ sections }: Props) {
                     {section.section}
                   </button>
                 ))}
+                <button
+                  className="buttons small-buttons"
+                  onClick={scrollToFooter}
+                >
+                  About this page
+                </button>
               </div>
             </div>
           </>
