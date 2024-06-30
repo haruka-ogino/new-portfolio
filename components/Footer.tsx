@@ -30,6 +30,38 @@ export default function Footer() {
             </a>
           ))}
         </section>
+        <section className="contact-info">
+          <a href="mailto:harukariq@gmail.com">harukariq@gmail.com</a>
+        </section>
+        <section>
+          <h2>This portfolio was built using:</h2>
+          <ul>
+            <li>
+              <img
+                src="https://img.shields.io/badge/React-black?style=fflat-square&logo=react"
+                alt="react js banner"
+              />
+            </li>
+            <li>
+              <img
+                src="https://img.shields.io/badge/Tailwind_CSS-black?style=fflat-square&logo=tailwind-css&logoColor=38B2AC"
+                alt="tailwind banner"
+              />
+            </li>
+            <li>
+              <img
+                src="https://img.shields.io/badge/Next.js-black?style=fflat-square&logo=nextdotjs&logoColor=white"
+                alt="next js banner"
+              />
+            </li>
+            <li>
+              <img
+                src="https://img.shields.io/badge/MongoDB-black?style=fflat-square&logo=mongodb"
+                alt="mongoDB banner"
+              />
+            </li>
+          </ul>
+        </section>
         {/* <h1>Haruka Ogino</h1> */}
       </footer>
     </>
