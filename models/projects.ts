@@ -7,6 +7,8 @@ export interface IProject extends Document {
   description: string
   githubRepo: string
   deployedLink: string
+  techstack: string
+  type: string
 }
 
 const projectSchema = new Schema<IProject>({

@@ -179,6 +179,9 @@ li.project {
 }
 
 @media (max-width: 630px) {
+  .about {
+    margin-top: 180px;
+  }
   .projects img {
     width: 100%;
     max-width: 25em;

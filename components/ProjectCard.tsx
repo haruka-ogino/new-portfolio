@@ -13,9 +13,8 @@ interface Props {
 }
 
 export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
-  const techStack = ['React', 'Node.js', 'Tailwind', 'Next.js', 'SQLite']
-  // const techStack = ['React, Node.js, Tailwind']
-  const type = 'Group project'
+  const tech = project.techstack
+  const techStack = tech.split(', ')
 
   function openPopup() {
     setShow(true)
@@ -25,13 +24,13 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
   return (
     <>
       <div className={`project-info ${i % 2 === 1 && 'reverse-text'}`}>
-        <h3>{type}</h3>
+        <h3>{project.type}</h3>
         <h2>{project.title}</h2>
         <p className={`${i % 2 === 1 && 'reverse-desc'}`}>
           {project.description}
         </p>
         <ul className={`tech-stack  ${i % 2 === 1 && 'reverse-stack'}`}>
-          {techStack.map((tech, i) => (
+          {techStack.map((tech: string, i: number) => (
             <li key={i}>{tech}</li>
           ))}
         </ul>
