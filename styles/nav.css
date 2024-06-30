@@ -78,7 +78,6 @@
 
 .small-nav {
   position: fixed;
-
   top: 0%;
   right: 0%;
   transform: translateX(0%);
@@ -88,8 +87,18 @@
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+.small-nav::before {
+  content: '';
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(to right, #1be2c7, #47d2f5);
+  z-index: -5;
 }
 
 .small-nav h5 {
@@ -111,4 +120,13 @@
 
 .small-buttons {
   font-size: 20px;
+}
+
+.nav-items {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 20px;
 }
