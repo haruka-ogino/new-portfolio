@@ -3,7 +3,6 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   background: linear-gradient(to top, #aadaeb 20%, #f1f9fc 100%);
-  /* background-color: #f1f9fc; */
   width: 100%;
 }
 

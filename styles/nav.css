@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 630px) {
-  .nav {
-    width: 100%;
+  .hidden {
+    display: none;
   }
 }

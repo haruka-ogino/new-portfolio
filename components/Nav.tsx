@@ -16,7 +16,7 @@ export default function Nav({ sections }: Props) {
   }
 
   return (
-    <nav id="nav" className="nav">
+    <nav id="nav" className="nav hidden">
       {sections.map((section, i) => (
         <button
           key={`button-${i}`}
