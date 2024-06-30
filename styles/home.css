@@ -218,6 +218,25 @@ li.project {
     height: auto;
     min-width: 10em;
   }
+  section.my-interests {
+    margin-bottom: 20em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+  }
+  section.my-interests > :nth-child(1),
+  section.my-interests > :nth-child(2) {
+    grid-column: auto / span 1;
+  }
+
+  section.my-interests > :nth-child(3) {
+    grid-column: 1 / span 2;
+  }
+
+  section.my-interests > :nth-child(4),
+  section.my-interests > :nth-child(5) {
+    grid-column: auto / span 1;
+  }
 }
 
 @keyframes slideInTop {
