@@ -55,7 +55,7 @@ export default function Nav({ sections }: Props) {
             <h5>━</h5>
           </div>
         ) : (
-          <div className="small-nav-items">
+          <>
             <div id="close-icon" onClick={() => setOpen(false)}>
               <h5>x</h5>
             </div>
@@ -68,7 +68,7 @@ export default function Nav({ sections }: Props) {
                 {section.section}
               </button>
             ))}
-          </div>
+          </>
         )}
         {/* </div> */}
 

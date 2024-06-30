@@ -78,6 +78,7 @@
 
 .small-nav {
   position: fixed;
+
   top: 0%;
   right: 0%;
   transform: translateX(0%);
@@ -86,6 +87,9 @@
   z-index: 1;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .small-nav h5 {
@@ -103,4 +107,8 @@
 #close-icon h5 {
   font-size: 1.5em;
   line-height: 0.7em;
+}
+
+.small-buttons {
+  font-size: 20px;
 }
