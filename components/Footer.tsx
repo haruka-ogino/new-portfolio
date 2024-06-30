@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div>
+        <div style={{ marginRight: '8em' }}>
           <section className="name">
             <h3>Haruka Ogino</h3>
             <h4>Full-stack Developer</h4>
@@ -30,7 +30,7 @@ export default function Footer() {
               style={{ marginLeft: '2px' }}
             >
               <FaEnvelope size={24} />
-              <p style={{ marginLeft: '2px' }}>harukariq@gmail.com</p>
+              <p style={{ marginLeft: '5px' }}>harukariq@gmail.com</p>
             </a>
             {links.map((link, i) => (
               <a key={i} href={link.link}>
@@ -42,42 +42,53 @@ export default function Footer() {
                     style={{ marginLeft: '1.5px', marginRight: '1.5px' }}
                   />
                 )}
-                <p>{link.name}</p>
+                <p style={{ marginLeft: '3px' }}>{link.name}</p>
               </a>
             ))}
           </section>
         </div>
-        <section style={{ margin: '0em 2em' }}>
-          <h4 style={{ marginBottom: '1em' }}>
-            This portfolio was built using:
-          </h4>
-          <ul>
-            <li>
+        <div>
+          <section style={{ margin: '0em 2em' }}>
+            <h4 style={{ marginBottom: '0.5em' }}>
+              This portfolio was built using:
+            </h4>
+            <ul>
+              <li>
+                <img
+                  src="https://img.shields.io/badge/React-224756?style=fflat-square&logo=react"
+                  alt="react js banner"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://img.shields.io/badge/Tailwind_CSS-224756?style=fflat-square&logo=tailwind-css&logoColor=38B2AC"
+                  alt="tailwind banner"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://img.shields.io/badge/Next.js-224756?style=fflat-square&logo=nextdotjs&logoColor=white"
+                  alt="next js banner"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://img.shields.io/badge/MongoDB-224756?style=fflat-square&logo=mongodb"
+                  alt="mongoDB banner"
+                />
+              </li>
+            </ul>
+          </section>
+          <section style={{ margin: '0em 2em' }}>
+            <h4 style={{ marginBottom: '0.5em' }}>Website's GitHub Repo:</h4>
+            <a href="https://github.com/haruka-ogino/new-portfolio">
               <img
-                src="https://img.shields.io/badge/React-224756?style=fflat-square&logo=react"
-                alt="react js banner"
+                src="https://img.shields.io/badge/GitHub-224756?style=fflat-square&logo=github"
+                alt="github banner as a link this site's repo"
               />
-            </li>
-            <li>
-              <img
-                src="https://img.shields.io/badge/Tailwind_CSS-224756?style=fflat-square&logo=tailwind-css&logoColor=38B2AC"
-                alt="tailwind banner"
-              />
-            </li>
-            <li>
-              <img
-                src="https://img.shields.io/badge/Next.js-224756?style=fflat-square&logo=nextdotjs&logoColor=white"
-                alt="next js banner"
-              />
-            </li>
-            <li>
-              <img
-                src="https://img.shields.io/badge/MongoDB-224756?style=fflat-square&logo=mongodb"
-                alt="mongoDB banner"
-              />
-            </li>
-          </ul>
-        </section>
+            </a>
+          </section>
+        </div>
       </footer>
     </>
   )
