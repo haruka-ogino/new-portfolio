@@ -26,8 +26,7 @@
   align-items: center;
 }
 
-section.my-links,
-section.my-interests {
+section.my-links {
   margin: 1em 0em;
   display: flex;
   align-items: center;
@@ -45,13 +44,24 @@ section.my-interests {
 }
 
 section.my-interests {
-  justify-content: space-around;
+  margin: 1em 0em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   width: 100%;
 }
 
-section .interest {
+.interest {
   text-align: center;
   margin: 0em;
+  align-items: center;
+  justify-content: center;
+}
+
+.interest svg {
+  background-color: #367f9a;
+  color: #f1f9fc;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .projects,
