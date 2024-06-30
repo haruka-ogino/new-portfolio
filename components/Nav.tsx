@@ -58,23 +58,21 @@ export default function Nav({ sections }: Props) {
           </div>
         ) : (
           <>
-            <div
-              className="small-nav"
-              id="close-icon"
-              onClick={() => setOpen(false)}
-            >
-              <h5>x</h5>
-            </div>
-            <div className="nav-items">
-              {sections.map((section, i) => (
-                <button
-                  key={`button-${i}`}
-                  className="buttons small-buttons"
-                  onClick={() => scroll(section.sectionRef)}
-                >
-                  {section.section}
-                </button>
-              ))}
+            <div className="small-nav" id="small-navbar">
+              <div id="close-icon" onClick={() => setOpen(false)}>
+                <h5>x</h5>
+              </div>
+              <div className="nav-items">
+                {sections.map((section, i) => (
+                  <button
+                    key={`button-${i}`}
+                    className="buttons small-buttons"
+                    onClick={() => scroll(section.sectionRef)}
+                  >
+                    {section.section}
+                  </button>
+                ))}
+              </div>
             </div>
           </>
         )}
