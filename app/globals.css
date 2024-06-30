@@ -6,6 +6,7 @@ html {
   display: flex;
   justify-content: center;
   height: auto;
+  color: #224756;
 }
 
 body {
@@ -20,7 +21,6 @@ body {
   background-color: #f1f9fc;
   z-index: -2;
   height: auto;
-  color: #293033;
 }
 
 /* new media query required for smaller then 650px width */
