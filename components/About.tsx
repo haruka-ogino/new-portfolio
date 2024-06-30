@@ -35,11 +35,15 @@ export default function About() {
 
           <section className="my-links">
             {links.map((link, i) => (
-              <a key={i} href={link.link}>
-                {link.name === 'LinkedIn' && <FaLinkedin size={35} />}
-                {link.name === 'GitHub' && <FaGithubSquare size={35} />}
-                {link.name === 'CV' && <FaFileAlt size={30} />}
-                {/* {link.name} */}
+              <a
+                key={i}
+                href={link.link}
+                style={{ display: 'flex', alignItems: 'flex-end' }}
+              >
+                {link.name === 'LinkedIn' && <FaLinkedin size={28} />}
+                {link.name === 'GitHub' && <FaGithubSquare size={28} />}
+                {link.name === 'CV' && <FaFileAlt size={25} />}
+                <p style={{ fontSize: '18px' }}>{link.name}</p>
               </a>
             ))}
           </section>

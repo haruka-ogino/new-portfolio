@@ -37,7 +37,8 @@ section.my-links {
   color: #367f9a;
 }
 
-.my-links a:hover svg {
+.my-links a:hover svg,
+.my-links a:hover p {
   transition: 200ms ease-in;
   color: #6dcff6;
 }
