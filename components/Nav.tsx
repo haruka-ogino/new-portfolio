@@ -1,6 +1,6 @@
 'use client'
 
-import { RefObject, useRef } from 'react'
+import { RefObject, useRef, useState } from 'react'
 import '../styles/nav.css'
 import { Section } from '@/models/sections'
 import { FaBars } from 'react-icons/fa6'
@@ -15,6 +15,9 @@ export default function Nav({ sections }: Props) {
       id.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  const [open, setOpen] = useState(false)
+  console.log(open)
 
   return (
     <>
@@ -43,19 +46,35 @@ export default function Nav({ sections }: Props) {
         Back to the top
       </button> */}
       </nav>
-      <nav className="small-nav small-hidden" id="open-nav">
-        {/* <b> */}
-        <h5>━</h5>
-        <h5>━</h5>
-        <h5>━</h5>
+      <nav className="small-nav small-hidden">
+        {/* <div onClick={() => setOpen((prevOpen) => !prevOpen)}> */}
+        {!open ? (
+          <div className="open-icon" onClick={() => setOpen(true)}>
+            <h5>━</h5>
+            <h5>━</h5>
+            <h5>━</h5>
+          </div>
+        ) : (
+          <div className="small-nav-items">
+            <div id="close-icon" onClick={() => setOpen(false)}>
+              <h5>x</h5>
+            </div>
+            {sections.map((section, i) => (
+              <button
+                key={`button-${i}`}
+                className="buttons small-buttons"
+                onClick={() => scroll(section.sectionRef)}
+              >
+                {section.section}
+              </button>
+            ))}
+          </div>
+        )}
+        {/* </div> */}
 
-        {/* </b> */}
-
-        {/* <b>
+        {/* <h5>⎯</h5>
           <h5>⎯</h5>
-          <h5>⎯</h5>
-          <h5>⎯</h5>
-        </b> */}
+          <h5>⎯</h5> */}
       </nav>
     </>
   )
