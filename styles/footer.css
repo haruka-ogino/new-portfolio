@@ -2,8 +2,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: linear-gradient(to top, #92c9dd 0%, #f1f9fc 100%);
-  background-color: #f1f9fc;
+  background: linear-gradient(to top, #aadaeb 20%, #f1f9fc 100%);
+  /* background-color: #f1f9fc; */
   width: 100%;
 }
 
@@ -36,6 +36,7 @@ footer {
 
 footer img {
   height: 25px;
+  margin-bottom: 1em;
 }
 
 footer ul {
@@ -45,4 +46,8 @@ footer ul {
 
 footer li {
   margin-right: 1em;
+}
+
+#gh-link:hover {
+  filter: drop-shadow(5px 5px 3px #92c9dd);
 }

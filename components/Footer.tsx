@@ -49,6 +49,18 @@ export default function Footer() {
         </div>
         <div>
           <section style={{ margin: '0em 2em' }}>
+            <h4 style={{ marginBottom: '0.5em' }}>Website's GitHub Repo:</h4>
+            <a
+              id="gh-link"
+              href="https://github.com/haruka-ogino/new-portfolio"
+            >
+              <img
+                src="https://img.shields.io/badge/GitHub-224756?style=fflat-square&logo=github"
+                alt="github banner as a link this site's repo"
+              />
+            </a>
+          </section>
+          <section style={{ margin: '0em 2em' }}>
             <h4 style={{ marginBottom: '0.5em' }}>
               This portfolio was built using:
             </h4>
@@ -78,15 +90,6 @@ export default function Footer() {
                 />
               </li>
             </ul>
-          </section>
-          <section style={{ margin: '0em 2em' }}>
-            <h4 style={{ marginBottom: '0.5em' }}>Website's GitHub Repo:</h4>
-            <a href="https://github.com/haruka-ogino/new-portfolio">
-              <img
-                src="https://img.shields.io/badge/GitHub-224756?style=fflat-square&logo=github"
-                alt="github banner as a link this site's repo"
-              />
-            </a>
           </section>
         </div>
       </footer>
