@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  background: linear-gradient(to top, #92c9dd 0%, #f1f9fc 100%);
+  background-color: #f1f9fc;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
