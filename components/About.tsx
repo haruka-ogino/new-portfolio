@@ -54,7 +54,7 @@ export default function About() {
           </section>
         </div>
       </div>
-
+      <br />
       <h2>My interests are...</h2>
       <section className="my-interests">
         <div className="interest">

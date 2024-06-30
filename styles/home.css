@@ -193,11 +193,15 @@ li.project {
 
 @media (max-width: 1000px) {
   .intro {
+    margin-top: 2em;
     margin-bottom: 1.5em;
   }
   .about-me {
     flex-direction: column;
     text-align: center;
+  }
+  .about {
+    margin-top: 8em;
   }
   section.my-links {
     justify-content: center;
