@@ -1,5 +1,10 @@
 import '../styles/home.css'
 import { FaLinkedin, FaGithubSquare, FaFileAlt } from 'react-icons/fa'
+import { IoLanguage } from 'react-icons/io5'
+import { TbDog } from 'react-icons/tb'
+import { FaLaptopCode } from 'react-icons/fa'
+import { PiCookingPotBold } from 'react-icons/pi'
+import { RiTreeLine } from 'react-icons/ri'
 
 export default function About() {
   const links = [
@@ -49,6 +54,30 @@ export default function About() {
           </section>
         </div>
       </div>
+
+      <h2>My interests are...</h2>
+      <section className="my-interests">
+        <div className="interest">
+          <FaLaptopCode size={28} />
+          <h4>Learning new tech</h4>
+        </div>
+        <div className="interest">
+          <IoLanguage size={28} />
+          <h4>Languages</h4>
+        </div>
+        <div className="interest">
+          <TbDog size={28} />
+          <h4>Pets</h4>
+        </div>
+        <div className="interest">
+          <PiCookingPotBold size={28} />
+          <h4>Cooking</h4>
+        </div>
+        <div className="interest">
+          <RiTreeLine size={28} />
+          <h4>Taking walks</h4>
+        </div>
+      </section>
     </>
   )
 }
