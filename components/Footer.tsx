@@ -31,7 +31,10 @@ export default function Footer() {
           ))}
         </section>
         <section className="contact-info">
-          <a href="mailto:harukariq@gmail.com">harukariq@gmail.com</a>
+          <h4>Haruka Ogino</h4>
+          <a href="mailto:harukariq@gmail.com" target="_blank" rel="noreferrer">
+            harukariq@gmail.com
+          </a>
         </section>
         <section>
           <h2>This portfolio was built using:</h2>
@@ -62,7 +65,6 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        {/* <h1>Haruka Ogino</h1> */}
       </footer>
     </>
   )
