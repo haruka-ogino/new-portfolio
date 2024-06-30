@@ -1,13 +1,19 @@
 footer {
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background: linear-gradient(to top, #92c9dd 0%, #f1f9fc 100%);
   background-color: #f1f9fc;
   width: 100%;
 }
 
-.footer-links {
+.name {
+  padding: 0px;
   margin: 0em 2em;
+}
+
+.footer-links {
+  margin: 1em 2em 2em 2em;
 }
 
 .footer-links a {
@@ -22,13 +28,21 @@ footer {
   padding: 0px;
 }
 
-.contact-info {
-  padding: 0px;
-  margin-bottom: 1em;
-}
-
 .footer-links a:hover svg,
 .footer-links a:hover p {
   transition: 200ms ease-in;
   color: #6dcff6;
+}
+
+footer img {
+  height: 25px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer li {
+  margin-right: 1em;
 }
