@@ -43,23 +43,8 @@ export default function Nav({ sections }: Props) {
             {section.section}
           </button>
         ))}
-        {/* <button className="buttons">Home</button>
-      <button className="buttons">Back to the top</button>
-      <button className="buttons">My GitHub</button>
-      <button className="buttons">My LinkedIn</button>
-      <button className="buttons">
-        My CV
-        <i className="fa fa-github-square" aria-hidden="true" />
-      </button> */}
-        {/* <button
-        className="buttons"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        Back to the top
-      </button> */}
       </nav>
       <nav className="small-hidden">
-        {/* <div onClick={() => setOpen((prevOpen) => !prevOpen)}> */}
         {!open ? (
           <div className="small-nav" onClick={() => setOpen(true)}>
             <div id="open-icon">
@@ -94,11 +79,6 @@ export default function Nav({ sections }: Props) {
             </div>
           </>
         )}
-        {/* </div> */}
-
-        {/* <h5>⎯</h5>
-          <h5>⎯</h5>
-          <h5>⎯</h5> */}
       </nav>
     </>
   )
