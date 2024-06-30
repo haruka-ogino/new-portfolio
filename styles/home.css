@@ -47,7 +47,11 @@ section.my-links {
   align-items: flex-start;
   justify-content: flex-start;
   height: auto;
-  padding-top: 5em;
+  padding: 3em 0em;
+}
+
+.achievements {
+  width: 100%;
 }
 
 .projects img {

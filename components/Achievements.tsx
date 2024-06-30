@@ -1,7 +1,7 @@
 export default function Achievements() {
   return (
     <>
-      <div className="animatedElement">
+      <div style={{ width: '100%' }}>
         <h1>Extra-curricular Activities & Achievements</h1>{' '}
         <div className="subtitle">
           <h3>Provoke Hack to the Future: A Generative AI Hackathon</h3>
