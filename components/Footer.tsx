@@ -12,17 +12,16 @@ export default function Footer() {
   return (
     <>
       <footer>
+        <section className="contact-info">
+          <h3>Haruka Ogino</h3>
+          <h4>Full-stack Developer</h4>
+          <a href="mailto:harukariq@gmail.com" target="_blank" rel="noreferrer">
+            harukariq@gmail.com
+          </a>
+        </section>
         <section className="footer-links">
           {links.map((link, i) => (
-            <a
-              key={i}
-              href={link.link}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginRight: '15px',
-              }}
-            >
+            <a key={i} href={link.link}>
               {link.name === 'LinkedIn' && <FaLinkedin size={28} />}
               {link.name === 'GitHub' && <FaGithubSquare size={28} />}
               {link.name === 'CV' && <FaFileAlt size={25} />}
@@ -30,12 +29,7 @@ export default function Footer() {
             </a>
           ))}
         </section>
-        <section className="contact-info">
-          <h4>Haruka Ogino</h4>
-          <a href="mailto:harukariq@gmail.com" target="_blank" rel="noreferrer">
-            harukariq@gmail.com
-          </a>
-        </section>
+
         <section>
           <h2>This portfolio was built using:</h2>
           <ul>
