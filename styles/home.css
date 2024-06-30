@@ -180,9 +180,6 @@ li.project {
   .project-visuals {
     align-items: center;
   }
-  /* .reverse-text {
-    align-items: flex-start;
-  } */
   .reverse-desc {
     text-align: start;
   }
@@ -210,7 +207,7 @@ li.project {
 
 @media (max-width: 630px) {
   .about {
-    margin-top: 50px;
+    margin-top: 300px;
   }
   .projects img {
     width: 100%;
@@ -236,6 +233,12 @@ li.project {
   section.my-interests > :nth-child(4),
   section.my-interests > :nth-child(5) {
     grid-column: auto / span 1;
+  }
+}
+
+@media (max-width: 385px) {
+  .about {
+    margin-top: 400px;
   }
 }
 
