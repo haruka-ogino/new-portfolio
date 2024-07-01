@@ -1,16 +1,23 @@
 .main {
-  margin-bottom: 20em;
+  margin-bottom: 35em;
+  margin-top: 7em;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 933px) {
   main {
-    margin-bottom: '20em';
+    margin-bottom: '60em';
   }
-}
+} */
 
 .blog-entries {
   padding-bottom: 0px;
   border-bottom: 1px solid #5ac4e1;
+}
+
+@media (max-width: 630px) {
+  .main {
+    margin-top: 0em;
+  }
 }
 
 .blog-item {
