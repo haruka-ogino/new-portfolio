@@ -9,6 +9,9 @@ export default function layout({ children }: any) {
         <button className="buttons">
           <Link href="/">← Back to main page</Link>
         </button>
+        <button className="buttons">
+          <Link href="/blog-entries">My Blog Entries</Link>
+        </button>
       </nav>
       {children}
     </>

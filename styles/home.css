@@ -35,12 +35,19 @@ section.my-links {
 .my-links a {
   margin-right: 10px;
   color: #367f9a;
+  /* display: 'flex';
+  align-items: 'flex-end'; */
 }
 
 .my-links a:hover svg,
 .my-links a:hover p {
   transition: 200ms ease-in;
   color: #6dcff6;
+}
+
+.my-links p {
+  font-size: '18px';
+  margin-left: '2px';
 }
 
 section.my-interests {

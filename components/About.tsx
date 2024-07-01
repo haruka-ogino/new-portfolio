@@ -1,10 +1,12 @@
 import '../styles/home.css'
 import { FaLinkedin, FaGithubSquare, FaFileAlt } from 'react-icons/fa'
+import { LuNewspaper } from 'react-icons/lu'
 import { IoLanguage } from 'react-icons/io5'
 import { TbDog } from 'react-icons/tb'
 import { FaLaptopCode } from 'react-icons/fa'
 import { PiCookingPotBold } from 'react-icons/pi'
 import { RiTreeLine } from 'react-icons/ri'
+import Link from 'next/link'
 
 export default function About() {
   const links = [
@@ -48,10 +50,20 @@ export default function About() {
                 {link.name === 'LinkedIn' && <FaLinkedin size={28} />}
                 {link.name === 'GitHub' && <FaGithubSquare size={28} />}
                 {link.name === 'CV' && <FaFileAlt size={25} />}
-                <p style={{ fontSize: '18px' }}>{link.name}</p>
+                <p style={{ fontSize: '18px', marginLeft: '2px' }}>
+                  {link.name}
+                </p>
               </a>
             ))}
-            {/* <Link href="/blog-entries">Blog</Link> */}
+            <Link
+              href="/blog-entries"
+              style={{ display: 'flex', alignItems: 'flex-end' }}
+            >
+              <LuNewspaper size={25} />
+              <p style={{ fontSize: '18px', marginLeft: '2px' }}>
+                My Blog Entries
+              </p>
+            </Link>
           </section>
         </div>
       </div>
