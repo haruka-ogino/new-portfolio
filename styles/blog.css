@@ -1,0 +1,23 @@
+.main {
+  margin-bottom: 20em;
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-bottom: '20em';
+  }
+}
+
+.blog-item {
+  display: flex;
+  border-top: 1px solid #5ac4e1;
+  justify-content: space-between;
+  padding: 1em 1em;
+  border-radius: 10px;
+}
+
+.blog-item:hover {
+  transition: 200ms ease-in;
+  color: #6dcff6;
+  background-color: black;
+}

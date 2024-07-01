@@ -1,5 +1,6 @@
 import { BlogEntry } from '@/models/blog'
 import Link from 'next/link'
+import '../../styles/blog.css'
 
 export const blogEntries: BlogEntry[] = [
   {
@@ -29,12 +30,13 @@ export default function BlogEntries() {
   const blogs = blogEntries.reverse()
 
   return (
-    <main>
+    <main className="main">
       {' '}
       <h1>My Blog Entries</h1>
       <div className="blog-entries">
         {blogs.map((blog, i) => (
-          <div className="blog blog-item">
+          <div className="blog-item">
+            {/* <div className="blog blog-item"> */}
             <Link href={`/blog/${i + 1}`}>
               <h2>{blog.title}</h2>
               <em>posted on {blog.date}</em>
