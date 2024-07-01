@@ -1,3 +1,8 @@
 export default function BlogEntries() {
-  return <main>hellooo</main>
+  return (
+    <main>
+      {' '}
+      <h1>My Blog Entries</h1>
+    </main>
+  )
 }

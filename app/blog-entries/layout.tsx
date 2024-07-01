@@ -10,7 +10,6 @@ export default function layout({ children }: any) {
           <Link href="/">← Back to main page</Link>
         </button>
       </nav>
-      <h1>My Blog Entries</h1>
       {children}
     </>
   )
