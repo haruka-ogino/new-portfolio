@@ -8,6 +8,11 @@
   }
 }
 
+.blog-entries {
+  padding-bottom: 0px;
+  border-bottom: 1px solid #5ac4e1;
+}
+
 .blog-item {
   display: flex;
   border-top: 1px solid #5ac4e1;
@@ -17,13 +22,22 @@
 }
 
 .blog-entry {
-  padding: 0.5em;
+  padding: 1em;
+  padding-bottom: 0.7em;
   border-radius: 10px;
   width: 100%;
 }
 
-.blog-entry:hover {
-  transition: 200ms ease-in;
+.blog-entry:hover,
+.blog-entry:hover h2,
+.blog-entry:hover h4 {
+  transition: 500ms ease-in;
   color: #6dcff6;
-  background-color: black;
+}
+
+.blog-entry:hover {
+  /* border: 2px solid #3e474b; */
+  padding-top: 0.7em;
+  padding-bottom: 1em;
+  background-color: #3e474b;
 }

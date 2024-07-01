@@ -38,9 +38,9 @@ export default function BlogEntries() {
           <li className="blog-item">
             <Link href={`/blog/${i + 1}`} className="blog-entry">
               <h2>{blog.title}</h2>
-              <h3 style={{ marginLeft: '2em' }}>
+              <h4 style={{ marginLeft: '2em' }}>
                 <em>posted on {blog.date}</em>
-              </h3>
+              </h4>
             </Link>
           </li>
         ))}
