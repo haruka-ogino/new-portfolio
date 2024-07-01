@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   overflow-y: hidden;
   flex-direction: column;

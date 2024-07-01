@@ -1,5 +1,8 @@
 footer {
   display: flex;
+  position: absolute;
+  /* left: 0%; */
+  bottom: 0%;
   flex-wrap: wrap;
   align-items: center;
   background: linear-gradient(to top, #aadaeb 20%, #f1f9fc 100%);

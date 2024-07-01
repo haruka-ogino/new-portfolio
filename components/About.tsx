@@ -51,6 +51,7 @@ export default function About() {
                 <p style={{ fontSize: '18px' }}>{link.name}</p>
               </a>
             ))}
+            {/* <Link href="/blog-entries">Blog</Link> */}
           </section>
         </div>
       </div>
