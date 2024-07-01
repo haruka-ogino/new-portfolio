@@ -33,17 +33,18 @@ export default function BlogEntries() {
     <main className="main">
       {' '}
       <h1>My Blog Entries</h1>
-      <div className="blog-entries">
+      <ul className="blog-entries">
         {blogs.map((blog, i) => (
-          <div className="blog-item">
-            {/* <div className="blog blog-item"> */}
-            <Link href={`/blog/${i + 1}`}>
+          <li className="blog-item">
+            <Link href={`/blog/${i + 1}`} className="blog-entry">
               <h2>{blog.title}</h2>
-              <em>posted on {blog.date}</em>
+              <h3 style={{ marginLeft: '2em' }}>
+                <em>posted on {blog.date}</em>
+              </h3>
             </Link>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   )
 }

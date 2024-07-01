@@ -12,11 +12,17 @@
   display: flex;
   border-top: 1px solid #5ac4e1;
   justify-content: space-between;
-  padding: 1em 1em;
-  border-radius: 10px;
+  padding: 0.5em;
+  line-height: 35px;
 }
 
-.blog-item:hover {
+.blog-entry {
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.blog-entry:hover {
   transition: 200ms ease-in;
   color: #6dcff6;
   background-color: black;
