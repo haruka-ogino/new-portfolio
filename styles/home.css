@@ -30,13 +30,19 @@ section.my-links {
   margin: 1em 0em;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+section.my-links .my-link {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding-bottom: 1em;
 }
 
 .my-links a {
   margin-right: 10px;
   color: #367f9a;
-  /* display: 'flex';
-  align-items: 'flex-end'; */
 }
 
 .my-links a:hover svg,
@@ -45,10 +51,10 @@ section.my-links {
   color: #6dcff6;
 }
 
-.my-links p {
+/* .my-links p {
   font-size: '18px';
   margin-left: '2px';
-}
+} */
 
 section.my-interests {
   margin: 1em 0em;

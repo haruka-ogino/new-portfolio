@@ -40,13 +40,9 @@ export default function About() {
             software engineering.{' '}
           </p>
 
-          <section className="my-links">
+          <section className="my-links" id="links">
             {links.map((link, i) => (
-              <a
-                key={i}
-                href={link.link}
-                style={{ display: 'flex', alignItems: 'flex-end' }}
-              >
+              <a key={i} href={link.link} className="my-link">
                 {link.name === 'LinkedIn' && <FaLinkedin size={28} />}
                 {link.name === 'GitHub' && <FaGithubSquare size={28} />}
                 {link.name === 'CV' && <FaFileAlt size={25} />}
@@ -55,10 +51,7 @@ export default function About() {
                 </p>
               </a>
             ))}
-            <Link
-              href="/blog-entries"
-              style={{ display: 'flex', alignItems: 'flex-end' }}
-            >
+            <Link href="/blog-entries" className="my-link">
               <LuNewspaper size={25} />
               <p style={{ fontSize: '18px', marginLeft: '2px' }}>
                 My Blog Entries
