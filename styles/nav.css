@@ -79,7 +79,7 @@
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .small-nav h5 {
@@ -119,6 +119,9 @@
 
 #close-icon h5 {
   padding: 0px;
+  position: fixed;
+  top: 5px;
+  right: 10px;
   font-size: 1.5em;
   line-height: 0.7em;
 }
@@ -130,6 +133,9 @@
 .nav-items {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  margin-right: 90px;
+  margin-right: 35px;
+}
+
+.small-buttons {
+  max-width: 200px;
 }
