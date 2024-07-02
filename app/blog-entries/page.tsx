@@ -1,7 +1,7 @@
 'use client'
 import { BlogEntry } from '@/models/blog'
 import '../../styles/blog.css'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export const blogEntries: BlogEntry[] = [
   {

@@ -1,27 +1,10 @@
-import { useRouter } from 'next/router'
-
-const BlogPost = () => {
-  const router = useRouter()
-  const { id } = router.query
-
+const BlogPost = ({ params }: { params: { id: string } }) => {
   return (
     <div>
-      <p>hello</p>
+      <h1>Blog Post {params.id}</h1>
+      <p>Content of blog post with ID: {params.id}</p>
     </div>
   )
 }
 
 export default BlogPost
-
-// export const BlogPost = () => {
-//   // const router = useRouter()
-//   // const { id } = router.query
-//   // console.log('hellloooo' + router.query + 'query')
-
-//   return <>Hello</>
-// }
-
-// pages/blog-entries/[id].tsx
-
-// import { useRouter } from 'next/router'
-// import { blogEntries } from '../page'
