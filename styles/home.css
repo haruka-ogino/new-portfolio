@@ -214,16 +214,22 @@ li.project {
     text-align: center;
   }
   .about {
-    margin-top: 8em;
+    margin-top: 2em;
   }
   section.my-links {
     justify-content: center;
   }
 }
 
+@media (max-width: 765px) {
+  .about {
+    margin-top: 4em;
+  }
+}
+
 @media (max-width: 630px) {
   .about {
-    margin-top: 300px;
+    margin-top: 18em;
   }
   .achievements {
     margin-bottom: 25em;
@@ -255,9 +261,18 @@ li.project {
   }
 }
 
-@media (max-width: 385px) {
+@media (max-width: 399px) {
+  .achievements {
+    margin-bottom: 22em;
+  }
+}
+
+@media (max-width: 388px) {
   .about {
-    margin-top: 400px;
+    margin-top: 26em;
+  }
+  .achievements {
+    margin-bottom: 35em;
   }
 }
 
