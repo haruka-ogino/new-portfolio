@@ -5,11 +5,8 @@ import { useRouter } from 'next/navigation'
 import { blogEntries } from '@/public/blogs'
 
 export default function BlogEntries() {
-  // const blogEntries = blogEntries.reverse()
   const router = useRouter()
-  // function log(i: number) {
-  //   console.log(`/blog-entries/${i + 1}`)
-  // }
+
   return (
     <main className="main">
       {' '}
@@ -35,7 +32,7 @@ export default function BlogEntries() {
       </div>
       <div className="test-box2">
         <p>hello</p>
-        <p>hello</p>
+        <p style={{ justifySelf: 'flex-start' }}>hello</p>
       </div> */}
     </main>
   )

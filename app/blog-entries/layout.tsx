@@ -13,7 +13,13 @@ export default function layout({ children }: any) {
           <Link href="/blog-entries">My Blog Entries</Link>
         </button>
       </nav>
-      <div style={{ margin: '0em 2em' }}>{children}</div>
+      <div
+        style={{
+          margin: '0em 2em',
+        }}
+      >
+        {children}
+      </div>
     </>
   )
 }

@@ -12,9 +12,9 @@ html {
 body {
   position: relative;
   display: flex;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   width: 70%;
   min-height: 100vh;
