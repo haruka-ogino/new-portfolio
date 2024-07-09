@@ -3,6 +3,12 @@ html {
   overflow-x: hidden;
   background: #19576c;
   background: radial-gradient(circle, #2c5563 0%, #6eaac0 50%, #cfecee 100%);
+  /* background: url('https://images.vexels.com/content/237175/preview/cute-simple-doodle-dog-23dedb.png')
+      repeat top left / 70px auto,
+    url('https://i.pinimg.com/originals/11/1d/0d/111d0d822f1870b37ef735bffcce0e86.png')
+      repeat-x -30px 70px / 70px auto,
+    url('https://www.ghibli-museum.jp/en/img/mainimg.png') repeat-x 0 140px /
+      70px auto; */
   display: flex;
   justify-content: center;
   height: auto;
