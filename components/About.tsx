@@ -26,7 +26,7 @@ export default function About() {
         <p>Full-stack Developer</p>
       </section>
       <div className="about-me">
-        <img src="/headshot.png" />
+        <img src="/round-headshot.png" />
         <div>
           <p>
             I am a full-stack developer dedicated to personal and professional
