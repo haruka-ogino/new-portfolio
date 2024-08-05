@@ -4,7 +4,7 @@ import { LuNewspaper } from 'react-icons/lu'
 import { IoLanguage } from 'react-icons/io5'
 import { TbDog } from 'react-icons/tb'
 import { FaLaptopCode } from 'react-icons/fa'
-import { PiCookingPotBold } from 'react-icons/pi'
+import { PiCookingPotBold, PiYarn } from 'react-icons/pi'
 import { RiTreeLine } from 'react-icons/ri'
 import Link from 'next/link'
 
@@ -80,8 +80,8 @@ export default function About() {
           <h4>Cooking</h4>
         </div>
         <div className="interest">
-          <RiTreeLine size={28} />
-          <h4>Taking walks</h4>
+          <PiYarn size={28} />
+          <h4>Punch needling</h4>
         </div>
       </section>
     </>
