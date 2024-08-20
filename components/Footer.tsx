@@ -74,14 +74,14 @@ export default function Footer() {
               </li>
               <li>
                 <img
-                  src="https://img.shields.io/badge/Tailwind_CSS-224756?style=fflat-square&logo=tailwind-css&logoColor=38B2AC"
-                  alt="tailwind banner"
+                  src="https://img.shields.io/badge/Next.js-224756?style=fflat-square&logo=nextdotjs&logoColor=white"
+                  alt="next js banner"
                 />
               </li>
               <li>
                 <img
-                  src="https://img.shields.io/badge/Next.js-224756?style=fflat-square&logo=nextdotjs&logoColor=white"
-                  alt="next js banner"
+                  src="https://img.shields.io/badge/Node.js-224756?style=fflat-square&logo=node.js"
+                  alt="node JS banner"
                 />
               </li>
               <li>
