@@ -5,7 +5,6 @@ import {
   FaEnvelope,
 } from 'react-icons/fa'
 import '../styles/footer.css'
-import { useRef } from 'react'
 export default function Footer() {
   const links = [
     {
