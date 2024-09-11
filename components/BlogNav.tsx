@@ -1,9 +1,7 @@
 'use client'
 
-import { RefObject, useRef, useState } from 'react'
+import { useState } from 'react'
 import '../styles/nav.css'
-import { Section } from '@/models/sections'
-import { FaBars } from 'react-icons/fa6'
 import Link from 'next/link'
 
 export default function BlogNav() {

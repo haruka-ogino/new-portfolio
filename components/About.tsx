@@ -5,7 +5,6 @@ import { IoLanguage } from 'react-icons/io5'
 import { TbDog } from 'react-icons/tb'
 import { FaLaptopCode } from 'react-icons/fa'
 import { PiCookingPotBold, PiYarn } from 'react-icons/pi'
-import { RiTreeLine } from 'react-icons/ri'
 import Link from 'next/link'
 
 export default function About() {

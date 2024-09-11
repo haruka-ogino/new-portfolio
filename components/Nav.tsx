@@ -1,9 +1,8 @@
 'use client'
 
-import { RefObject, useRef, useState } from 'react'
+import { RefObject, useState } from 'react'
 import '../styles/nav.css'
 import { Section } from '@/models/sections'
-import { FaBars } from 'react-icons/fa6'
 
 interface Props {
   sections: Section[]

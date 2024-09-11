@@ -1,9 +1,11 @@
 import { IProject } from '@/models/projects'
 import '../styles/home.css'
-import { FaGithubSquare, FaRegHandPointUp } from 'react-icons/fa'
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { FaRegPlayCircle } from 'react-icons/fa'
-import PopUp from './ProjectPopup'
+import {
+  FaGithubSquare,
+  FaRegHandPointUp,
+  FaRegPlayCircle,
+} from 'react-icons/fa'
+import { Dispatch, SetStateAction } from 'react'
 
 interface Props {
   project: IProject
