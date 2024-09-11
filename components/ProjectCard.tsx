@@ -2,6 +2,7 @@ import { IProject } from '@/models/projects'
 import '../styles/home.css'
 import { FaGithubSquare, FaRegHandPointUp } from 'react-icons/fa'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { FaRegPlayCircle } from 'react-icons/fa'
 import PopUp from './ProjectPopup'
 
 interface Props {
@@ -38,6 +39,16 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
       <div className={`project-visuals ${i % 2 === 0 && 'reverse-visuals'}`}>
         <img src={project.img} alt={project.alt} />
         <div className="project-links">
+          {project.title === 'Film Dori' && (
+            <a
+              href="https://www.youtube.com/watch?v=xASQR-xurMI"
+              className="project-link"
+              style={{ marginRight: '15px' }}
+            >
+              <FaRegPlayCircle size={24} />
+              <p style={{ marginLeft: '1px' }}>Demo</p>
+            </a>
+          )}
           <a
             href={project.githubRepo}
             className="project-link"
