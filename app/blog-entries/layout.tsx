@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import '../../styles/nav.css'
 import '../../styles/home.css'
 import BlogNav from '@/components/BlogNav'

@@ -1,5 +1,4 @@
 'use client'
-import { BlogEntry } from '@/models/blog'
 import '../../styles/blog.css'
 import { useRouter } from 'next/navigation'
 import { blogEntries } from '@/public/blogs'
