@@ -15,6 +15,7 @@ import PopUp from '@/components/ProjectPopup'
 export default function Home() {
   const [show, setShow] = useState(false)
   const [popupTitle, setPopupTitle] = useState('')
+  const [popupContent, setPopupContent] = useState<JSX.Element>(<p>hello</p>)
 
   verticalScroll(show)
   // const navigate = useNavigate()
@@ -44,7 +45,11 @@ export default function Home() {
       {show && (
         <div className="popup-overlay" onClick={() => setShow(false)}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>
-            <PopUp setShow={setShow} title={popupTitle} />
+            <PopUp
+              setShow={setShow}
+              title={popupTitle}
+              renderContent={popupContent}
+            />
           </div>
         </div>
       )}
@@ -53,7 +58,11 @@ export default function Home() {
           <About />
         </section>{' '}
         <section className="sections projects" ref={projectsRef}>
-          <Projects setShow={setShow} setTitle={setPopupTitle} />
+          <Projects
+            setShow={setShow}
+            setTitle={setPopupTitle}
+            setPopupContent={setPopupContent}
+          />
         </section>{' '}
         <section className="sections education" ref={eduRef}>
           <Education />
