@@ -8,9 +8,14 @@ import ProjectCard from './ProjectCard'
 interface Props {
   setShow: Dispatch<SetStateAction<boolean>>
   setTitle: Dispatch<SetStateAction<string>>
+  setPopupContent: Dispatch<SetStateAction<JSX.Element>>
 }
 
-export default function Projects({ setShow, setTitle }: Props) {
+export default function Projects({
+  setShow,
+  setTitle,
+  setPopupContent,
+}: Props) {
   const [projects, setProjects] = useState<IProject[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -64,6 +69,7 @@ export default function Projects({ setShow, setTitle }: Props) {
               i={i}
               setShow={setShow}
               setTitle={setTitle}
+              setPopupContent={setPopupContent}
             />
           </li>
         ))}
