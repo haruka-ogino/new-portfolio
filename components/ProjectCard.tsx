@@ -13,14 +13,42 @@ interface Props {
 
   setShow: Dispatch<SetStateAction<boolean>>
   setTitle: Dispatch<SetStateAction<string>>
+  setPopupContent: Dispatch<SetStateAction<JSX.Element>>
 }
 
-export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
+export default function ProjectCard({
+  project,
+  i,
+  setShow,
+  setTitle,
+  setPopupContent,
+}: Props) {
   const tech = project.techstack
   const techStack = tech.split(', ')
 
-  function openPopup() {
+  function openPopup(clicked: string) {
     setShow(true)
+    let content
+    if (clicked === 'deployment') {
+      content = (
+        <p>
+          This project is currently undergoing development and has yet to be
+          deployed.
+        </p>
+      )
+    } else if (clicked === 'video') {
+      content = (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xASQR-xurMI"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )
+    }
+    if (content) setPopupContent(content)
     setTitle(project.title)
   }
 
@@ -42,14 +70,10 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
         <img src={project.img} alt={project.alt} />
         <div className="project-links">
           {project.title === 'Film Dori' && (
-            <a
-              href="https://www.youtube.com/watch?v=xASQR-xurMI"
-              className="project-link"
-              style={{ marginRight: '15px' }}
-            >
+            <div onClick={() => openPopup('video')} style={{ display: 'flex' }}>
               <FaRegPlayCircle size={24} />
               <p style={{ marginLeft: '1px' }}>Demo</p>
-            </a>
+            </div>
           )}
           <a
             href={project.githubRepo}
@@ -65,7 +89,10 @@ export default function ProjectCard({ project, i, setShow, setTitle }: Props) {
               <p>Deployed Link</p>
             </a>
           ) : (
-            <div onClick={openPopup} style={{ display: 'flex' }}>
+            <div
+              onClick={() => openPopup('deployment')}
+              style={{ display: 'flex' }}
+            >
               <FaRegHandPointUp size={20} />
               <p>Deployed Link</p>
             </div>
