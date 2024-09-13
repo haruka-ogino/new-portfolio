@@ -70,7 +70,10 @@ export default function ProjectCard({
         <img src={project.img} alt={project.alt} />
         <div className="project-links">
           {project.title === 'Film Dori' && (
-            <div onClick={() => openPopup('video')} style={{ display: 'flex' }}>
+            <div
+              onClick={() => openPopup('video')}
+              style={{ display: 'flex', marginRight: '15px' }}
+            >
               <FaRegPlayCircle size={24} />
               <p style={{ marginLeft: '1px' }}>Demo</p>
             </div>
